@@ -1,14 +1,15 @@
 .promo {
+    padding-bottom: 180px;
     &__wrapper {
         @include wrapper;
         display: grid;
-        grid-template-columns: 55px 55fr 71fr;
-        grid-column-gap: 25px;
+        grid-template-columns: 55px 64fr 70fr;
         grid-template-rows: 190px 1fr;
         grid-row-gap: 40px;
         grid-template-areas: "soc promo works" "soc btn works";
     }
     &__soc {
+        padding-top: 122px;
         grid-area: soc;
     }
     &__content {
@@ -35,6 +36,7 @@
         &--colored {
             color: $hover;
             text-decoration: underline;
+            display: inline-block;
         }
     }
     &__subtitle {
@@ -59,6 +61,59 @@
     &__button {
         &--works {
             border: none;
+            margin-left: auto;
+            width: 180px;
+        }
+    }
+    &__soclink {
+        display: block;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+        &--tg {
+            background-image: url('./../img/telegram.svg');
+        }
+        &--whatsapp {
+            background-image: url('./../img/whatsapp.svg');
+        }
+        &--fb {
+            background-image: url('./../img/facebook.svg');
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-row-gap: 0;
+            grid-template-areas: "promo" "works" "btn" "soc";
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        &__works {
+            margin-left: 120px;
+        }
+        &__btn {
+            margin-top: 75px;
+            display: flex;
+            justify-content: center;
+        }
+        &__soc {
+            padding-top: 47px;
+            display: flex;
+            width: 135px;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

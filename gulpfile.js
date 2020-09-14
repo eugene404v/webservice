@@ -21,10 +21,10 @@ const dist = "./dist/";
 
 
 
-gulp.task('html', function (callback) {
-    return gulp.src('./src/html/*.html')
+gulp.task('html', function(callback) {
+    return gulp.src('./src/*.html')
         .pipe(plumber({
-            errorHandler: notify.onError(function (err) {
+            errorHandler: notify.onError(function(err) {
                 return {
                     title: 'HTML include',
                     sound: false,
@@ -39,17 +39,17 @@ gulp.task('html', function (callback) {
     callback();
 });
 
-gulp.task('pug', function () {
+gulp.task('pug', function() {
     gulp.src('src/pug/*.pug')
-        .pipe(pug({pretty: '\t'}))
+        .pipe(pug({ pretty: '\t' }))
         .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('sass', function (callback) {
+gulp.task('sass', function(callback) {
     return gulp.src('./src/scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber({
-            errorHandler: notify.onError(function (err) {
+            errorHandler: notify.onError(function(err) {
                 return {
                     title: 'SCSS compilation',
                     sound: false,
@@ -121,33 +121,33 @@ gulp.task("copy-assets", () => {
         .on("end", browserSync.reload);
 });
 
-gulp.task('webp', () =>
+/*gulp.task('webp', () =>
     gulp.src('src/assets/img/*.*')
     .pipe(webp())
     .pipe(gulp.dest('dist'))
-);
+);*/
 
 gulp.task('compress', function(done) {
     gulp.src('src/assets/img/*.*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(gulp.dest('dist'))
-  done();
-  });
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('dist/img'))
+    done();
+});
 
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     watch(['./dist/*.html', './dist/css/**/*.css'], gulp.parallel(browserSync.reload));
-    watch('./src/scss/**/*.scss', function () {
+    watch('./src/scss/**/*.scss', function() {
         setTimeout(gulp.parallel('sass'), 1000);
     });
     watch('./src/html/**/*.html', gulp.parallel('html'));
@@ -155,7 +155,7 @@ gulp.task('watch', function () {
     watch("./src/js/**/*.js", gulp.parallel("build-js"));
 });
 
-gulp.task('server', function () {
+gulp.task('server', function() {
     browserSync.init({
         server: {
             baseDir: "./dist/"
@@ -164,10 +164,10 @@ gulp.task('server', function () {
 });
 
 gulp.task('default', gulp.series(
-    gulp.parallel('sass', 'html', "build-js", "compress", "webp"),
+    gulp.parallel('sass', 'html', "build-js", "compress"),
     gulp.parallel('server', 'watch')
 ));
 
 
 
-//, "copy-assets"
+//, "copy-assets", "webp"

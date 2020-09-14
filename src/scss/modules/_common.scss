@@ -1,15 +1,12 @@
 body {
     padding: 0;
-    font-family: 'Open sans', 'Arial, sans-serif';
+    color: $dark-text;
 }
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
     display: block;
     box-sizing: border-box;
-
-
     &:hover {
         text-decoration: none;
     }
@@ -50,4 +47,9 @@ textarea {
     width: 1px;
     height: 1px;
     margin: -1px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }

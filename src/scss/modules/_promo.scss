@@ -1,0 +1,64 @@
+.promo {
+    &__wrapper {
+        @include wrapper;
+        display: grid;
+        grid-template-columns: 55px 55fr 71fr;
+        grid-column-gap: 25px;
+        grid-template-rows: 190px 1fr;
+        grid-row-gap: 40px;
+        grid-template-areas: "soc promo works" "soc btn works";
+    }
+    &__soc {
+        grid-area: soc;
+    }
+    &__content {
+        grid-area: promo;
+    }
+    &__btn {
+        grid-area: btn;
+    }
+    &__works {
+        grid-area: works;
+    }
+    &__subtext {
+        color: #979696;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 35px;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 135%;
+        &--colored {
+            color: $hover;
+            text-decoration: underline;
+        }
+    }
+    &__subtitle {
+        padding-left: 15px;
+        position: relative;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $hover;
+        }
+    }
+    &__button {
+        &--works {
+            border: none;
+        }
+    }
+}

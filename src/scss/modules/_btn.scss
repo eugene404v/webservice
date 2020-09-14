@@ -1,27 +1,28 @@
 .btn {
-    background-color: $main-color;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    border: 2px solid $hover;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 56px;
+    width: 225px;
+    font-weight: bold;
     font-size: 16px;
-    line-height: 1;
-    font-weight: 700;
-    width: 210px;
-    padding: 20px 0 20px 0;
-    border-radius: 3px;
-    text-align: center;
-    border: 3px solid $main-color;
-
-    &:hover {
-        background-color: white;
-        color: $main-color;
-    }
-
-    &--empty { 
-        background-color: white;
-        color: $main-color;
-
-        &:hover {
-            color: white;
-            background-color: $main-color;
+    line-height: 20px;
+    color: $hover;
+    &--arrow {
+        &::after {
+            display: block;
+            content: "";
+            border-radius: 50%;
+            background-color: $hover;
+            height: 30px;
+            width: 30px;
+            background-image: url('./../img/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: left 0 center;
         }
     }
 }

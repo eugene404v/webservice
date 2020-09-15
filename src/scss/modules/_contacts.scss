@@ -120,6 +120,7 @@
 
 @media screen and (max-width:991px) {
     .contacts {
+        padding-top: 30px;
         &__wrapper {
             grid-template-columns: 1fr 1fr 2fr;
             grid-template-rows: auto;
@@ -149,8 +150,9 @@
     }
 }
 
-@media screen and (max-width:610px) {
+@media screen and (max-width:650px) {
     .contacts {
+        padding-top: 40px;
         &__wrapper {
             grid-template-columns: 1fr auto;
             grid-template-areas: "head soc" "mail soc" "form form" "adr adr";
@@ -190,6 +192,7 @@
 
 @media screen and (max-width:350px) {
     .contacts {
+        padding-top: 24px;
         &__wrapper {
             grid-template-columns: 1fr;
             grid-template-areas: "head" "mail" "soc" "form" "adr";

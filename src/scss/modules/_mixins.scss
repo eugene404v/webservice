@@ -12,6 +12,23 @@
     }
 }
 
+@mixin side-wrapper {
+    max-width: calc(1304px + (100vw - 1304px) / 2);
+    margin-left: calc((100vw - 1304px) / 2);
+    @media screen and (max-width: 1440px) {
+        max-width: calc(1124px + (100vw - 1124px) / 2);
+        margin-left: calc((100vw - 1124px) / 2);
+    }
+    @media screen and (max-width: 1100px) {
+        max-width: calc(1004px + (100vw - 1004px) / 2);
+        margin-left: calc((100vw - 1004px) / 2);
+    }
+    @media screen and (max-width: 991px) {
+        max-width: 95%;
+        margin-left: 5%;
+    }
+}
+
 @mixin section-name {
     font-weight: bold;
     font-size: 20px;

@@ -90,10 +90,38 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
 //import './modules/sliders'
+
+Object(_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+/***/ }),
+
+/***/ "./src/js/modules/hamburger.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/hamburger.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var openMenu = function openMenu() {
+  var menuTrigger = document.querySelector('.header__btn');
+  var menu = document.querySelector('.header__container');
+  menuTrigger.addEventListener('click', function () {
+    menu.classList.toggle('header__container--opened');
+    menuTrigger.classList.toggle('header__btn--opened');
+    document.body.classList.toggle('overflow_hidden');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (openMenu);
 
 /***/ })
 

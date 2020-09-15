@@ -4,6 +4,10 @@
     padding-top: 50px;
     padding-bottom: 5px;
     margin-bottom: 143px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -24,6 +28,10 @@
         }
         &:after {
             background: $hover;
+        }
+        &:active,
+        &:focus {
+            outline: none;
         }
     }
     &__nav {
@@ -113,6 +121,9 @@
             color: $hover;
         }
     }
+    &__soc {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -129,10 +140,12 @@
 @media screen and (max-width: 1100px) {
     .header {
         &__link {
-            margin-right: 15px;
+            margin-right: 10px;
+            font-size: 14px;
         }
         &__contact {
             margin-left: 5px;
+            font-size: 14px;
         }
     }
 }
@@ -140,8 +153,7 @@
 @media screen and (max-width: 991px) {
     .header {
         padding-top: 30px;
-        box-shadow: none;
-        position: relative;
+        /*box-shadow: none;*/
         &__btn {
             display: block;
             &--opened:before {
@@ -155,20 +167,66 @@
                 flex-direction: column;
                 align-items: center;
                 position: absolute;
-                top: 90px;
+                top: 75px;
                 left: 0;
                 right: 0;
+                bottom: 0;
+                z-index: 2;
+                height: calc(100vh - 75px);
                 width: 100%;
                 background-color: #fff;
+                opacity: 1;
+                overflow: hidden;
             }
         }
         &__nav {
+            margin-top: 80px;
             flex-direction: column;
             align-items: center;
             margin-right: 0;
         }
         &__link {
             margin-right: 0;
+            margin-bottom: 19px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            color: $dark-text;
+            opacity: 1;
+        }
+        &__contact {
+            margin-left: 0;
+            &--address {
+                display: none;
+            }
+            &--email {
+                margin-top: auto;
+                margin-bottom: 15px;
+            }
+            &--phone {
+                margin-bottom: auto;
+            }
+        }
+        &__soc {
+            display: flex;
+            width: 150px;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        &__soclink {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-image: url('./../img/telegram.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            &--wa {
+                background-image: url('./../img/whatsapp.svg');
+            }
+            &--fb {
+                background-image: url('./../img/facebook.svg');
+            }
         }
     }
 }

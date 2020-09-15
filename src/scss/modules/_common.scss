@@ -3,6 +3,10 @@ body {
     color: $dark-text;
 }
 
+.overflow_hidden {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     display: block;
@@ -57,4 +61,8 @@ button {
 
 .svg-sprite {
     display: none;
+}
+
+main {
+    padding-top: 75px;
 }

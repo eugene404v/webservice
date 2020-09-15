@@ -28,6 +28,7 @@
     }
     &__soc {
         grid-area: soc;
+        padding-top: 80px;
     }
     &__soc-item {
         font-weight: 600;
@@ -35,9 +36,47 @@
         line-height: 20px;
         color: $dark-text;
         padding-left: 40px;
+        position: relative;
+        margin-bottom: 30px;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+        }
+        &--tg:before {
+            background-image: url('./../img/footer-tg.svg');
+        }
+        &--wa:before {
+            background-image: url('./../img/footer-wa.svg');
+        }
+        &--fb:before {
+            background-image: url('./../img/footer-fb.svg');
+        }
     }
     &__mail {
         grid-area: mail;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__tel {
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark-text;
+    }
+    &__email {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark-text;
     }
     &__form {
         grid-area: form;
@@ -76,5 +115,101 @@
         margin-left: auto;
         width: 170px;
         height: 52px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: auto;
+            grid-template-areas: "head head form" "soc mail form" "adr adr form";
+        }
+        &__subtitle {
+            margin-bottom: 20px;
+        }
+        &__form {
+            margin-top: 40px;
+            height: 304px;
+        }
+        &__soc {
+            padding-top: 0;
+            margin-top: 30px;
+        }
+        &__mail {
+            margin-top: 30px;
+            justify-content: start;
+        }
+        &__tel {
+            margin-bottom: 14px;
+        }
+        &__btn {
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width:610px) {
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr auto;
+            grid-template-areas: "head soc" "mail soc" "form form" "adr adr";
+        }
+        &__headline {
+            position: relative;
+            padding-top: 60px;
+        }
+        &__subtitle {
+            position: absolute;
+            top: 10px;
+            width: 110%;
+            font-size: 16px;
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        &__soc {
+            padding-top: 65px;
+            margin-top: 0;
+        }
+        &__mail {
+            margin-top: 20px;
+        }
+        &__form {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 55px;
+        }
+        &__address {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas: "head" "mail" "soc" "form" "adr";
+        }
+        &__soc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__mail {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__headline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
     }
 }

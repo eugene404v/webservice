@@ -9,6 +9,7 @@ a {
     box-sizing: border-box;
     &:hover {
         text-decoration: none;
+        color: $hover;
     }
 }
 

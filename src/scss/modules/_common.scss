@@ -64,5 +64,20 @@ button {
 }
 
 main {
-    padding-top: 75px;
+    padding-top: 95px;
+}
+
+@media screen and (max-width: 991px) {
+    main {
+        padding-top: 75px;
+    }
+}
+
+.glide__slides {
+    overflow: visible;
+    padding: 20px;
+}
+
+.glide__track {
+    overflow: visible;
 }

@@ -2,6 +2,7 @@
     background: #152238;
     padding-bottom: 100px;
     padding-top: 100px;
+    min-height: 720px;
     &__wrapper {
         @include side-wrapper;
         display: flex;
@@ -40,23 +41,26 @@
     }
     &__slider {
         display: flex;
-        padding: 40px;
         overflow-x: hidden;
         align-items: flex-end;
+        padding-left: 20px;
     }
 }
 
 .proj {
-    box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.24);
     border-radius: 20px;
     width: 380px;
     height: 460px;
-    padding: 44px 23px 36px 23px;
+    padding: 24px 23px 36px 23px;
     transition: .5s;
     margin-right: 20px;
-    &--active,
+    &__slide--active~li .proj {
+        box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.24);
+    }
+    &__slide--active .proj,
     &:active,
     &:hover {
+        padding-top: 34px;
         height: 480px;
         box-shadow: -1px 8px 30px 3px rgba(243, 110, 15, 0.22);
     }
@@ -97,13 +101,13 @@
             color: $hover;
         }
     }
-    &--active .proj__svg,
+    &__slide--active .proj__svg,
     &:active .proj__svg,
     &:hover .proj__svg {
         fill: $hover;
         transform: rotate(-45deg);
     }
-    &--active .proj__link,
+    &__slide--active .proj__link,
     &:active .proj__link,
     &:hover .proj__link {
         color: $hover;

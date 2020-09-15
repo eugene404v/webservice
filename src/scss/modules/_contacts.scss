@@ -1,0 +1,80 @@
+.contacts {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &__wrapper {
+        @include wrapper;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "head soc mail form" "adr soc mail form";
+    }
+    &__headline {
+        grid-area: head;
+    }
+    &__subtitle {
+        @include section-name;
+        margin-bottom: 43px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 126.5%;
+    }
+    &__address {
+        grid-area: adr;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+    }
+    &__soc {
+        grid-area: soc;
+    }
+    &__soc-item {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark-text;
+        padding-left: 40px;
+    }
+    &__mail {
+        grid-area: mail;
+    }
+    &__form {
+        grid-area: form;
+        padding: 35px 57px;
+        width: 353px;
+        height: 282px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #F6F6F6;
+        box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+    }
+    &__input {
+        width: 100%;
+        display: block;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(25, 26, 30, 0.5);
+        padding-bottom: 5px;
+        &::placeholder {
+            opacity: 0.3;
+            color: $hover;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        &:focus {
+            border-bottom: 1px solid #191A1E;
+            outline: none;
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+    &__btn {
+        margin-left: auto;
+        width: 170px;
+        height: 52px;
+    }
+}

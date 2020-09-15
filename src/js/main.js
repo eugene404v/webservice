@@ -1,1 +1,1 @@
-import './modules/sliders'
+//import './modules/sliders'

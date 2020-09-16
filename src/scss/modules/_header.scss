@@ -157,27 +157,41 @@
         /*box-shadow: none;*/
         &__btn {
             display: block;
+            transition: 1s;
             &--opened:before {
-                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(50%);
+                transition: 1s;
+            }
+            &--opened:after {
+                transition: 1s;
+                position: relative;
+                top: 50%;
+                transform: translateY(50%);
             }
         }
         &__container {
-            display: none;
+            height: 0;
+            position: absolute;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 75px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            width: 100%;
+            background-color: #fff;
+            opacity: 1;
+            overflow: hidden;
+            transition: 1s;
             &--opened {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                top: 75px;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 2;
+                transition: 1s;
                 height: calc(100vh - 75px);
-                width: 100%;
-                background-color: #fff;
-                opacity: 1;
-                overflow: hidden;
             }
         }
         &__nav {
@@ -229,5 +243,14 @@
                 background-image: url('./../img/facebook.svg');
             }
         }
+    }
+}
+
+@keyframes openmenu {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
     }
 }

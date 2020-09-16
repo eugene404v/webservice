@@ -45,6 +45,7 @@
     align-items: center;
     justify-content: space-between;
     background-repeat: no-repeat;
+    transition: .5s;
     &--dev {
         background-image: url('./../img/serv-dev.svg');
         background-position: 10px 18px;

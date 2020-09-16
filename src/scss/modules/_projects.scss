@@ -113,3 +113,30 @@
         color: $hover;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .projects {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__info {
+            margin-right: 0;
+            width: 100%;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            height: 36px;
+            padding: 0 8px;
+            padding-bottom: 2px;
+            border-radius: 21px;
+            background-color: #fff;
+            color: $hover;
+            margin-right: 13px;
+        }
+    }
+}

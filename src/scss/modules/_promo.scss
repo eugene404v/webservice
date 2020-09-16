@@ -1,5 +1,6 @@
 .promo {
     padding-bottom: 180px;
+    padding-top: 150px;
     &__wrapper {
         @include wrapper;
         display: grid;
@@ -32,12 +33,26 @@
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
-        line-height: 135%;
+        line-height: 65px;
+        position: relative;
         &--colored {
             color: $hover;
             text-decoration: underline;
             display: inline-block;
+            animation-name: change;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
         }
+    }
+    &__container {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        height: 65px;
+        margin-bottom: 25px;
+    }
+    &__item {
+        padding-bottom: 10px;
     }
     &__subtitle {
         padding-left: 15px;
@@ -59,6 +74,8 @@
         }
     }
     &__button {
+        height: 56px;
+        width: 225px;
         &--works {
             border: none;
             margin-left: auto;
@@ -81,10 +98,28 @@
             background-image: url('./../img/facebook.svg');
         }
     }
+    &__pics {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+    &__img {
+        max-width: 100%;
+        &--main {
+            z-index: 2;
+        }
+        &--second {
+            position: absolute;
+            right: 0;
+        }
+    }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1100px) {
     .promo {
+        padding-top: 100px;
+        padding-bottom: 64px;
         &__wrapper {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -99,11 +134,29 @@
             justify-content: center;
             margin-bottom: 40px;
         }
+        &__title {
+            /*text-align: left;*/
+            &--colored {
+                width: fit-content;
+            }
+            &--first {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__container {
+            width: fit-content;
+            text-align: left;
+            position: relative;
+            margin-left: -15px;
+            margin-bottom: -10px;
+        }
         &__works {
-            margin-left: 120px;
+            margin-left: 150px;
+            margin-right: 150px;
         }
         &__btn {
-            margin-top: 75px;
+            margin-top: 65px;
             display: flex;
             justify-content: center;
         }
@@ -114,6 +167,110 @@
             justify-content: space-between;
             margin-left: auto;
             margin-right: auto;
+        }
+        &__img {
+            &--second {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        &__works {
+            margin-right: -5vw;
+            margin-left: 80px;
+        }
+        &__button {
+            @include btn--hover;
+            &:hover {
+                @include btn;
+            }
+            &--works {
+                @include btn;
+                @include btn--noborder;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .promo {
+        &__title {
+            font-size: 34px;
+            line-height: 46px;
+        }
+        &__container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            height: 46px;
+            margin-bottom: 0;
+            margin-top: -5px;
+        }
+        &__works {
+            margin-left: 0;
+            margin-right: -5vw;
+        }
+        &__button {
+            &--works {
+                margin-right: 5vw;
+            }
+        }
+        &__img {
+            &--main {
+                max-width: 80%;
+                margin-right: 50px;
+            }
+            &--second {
+                max-width: 60%;
+            }
+        }
+    }
+}
+
+@keyframes change {
+    0%,
+    20%,
+    100% {
+        transform: translate3d(0, 0, 0);
+        width: 170px;
+    }
+    25%,
+    45%,
+    75%,
+    95% {
+        transform: translate3d(0, -33%, 0);
+        width: 220px;
+    }
+    50%,
+    70% {
+        transform: translate3d(0, -66%, 0);
+        width: 310px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    @keyframes change {
+        0%,
+        20%,
+        100% {
+            transform: translate3d(0, 0, 0);
+            width: auto;
+        }
+        25%,
+        45%,
+        75%,
+        95% {
+            transform: translate3d(0, -33%, 0);
+            width: auto;
+        }
+        50%,
+        70% {
+            transform: translate3d(0, -66%, 0);
+            width: auto;
         }
     }
 }

@@ -1,0 +1,50 @@
+.footer {
+    background: #F2F2F2;
+    padding-top: 42px;
+    padding-bottom: 35px;
+    &__wrapper {
+        @include wrapper;
+    }
+    &__logo {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000;
+        margin-bottom: 5px;
+    }
+    &__year {
+        color: $hover;
+    }
+    &__copy {
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    &__policy {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: underline;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .footer {
+        &__wrapper {
+            margin-left: 296px;
+        }
+    }
+}
+
+@media screen and (max-width:610px) {
+    .footer {
+        &__wrapper {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

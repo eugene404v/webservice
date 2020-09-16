@@ -112,6 +112,7 @@
         }
     }
     &__btn {
+        @include btn--hover;
         margin-left: auto;
         width: 170px;
         height: 52px;

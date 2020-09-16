@@ -3823,6 +3823,7 @@ new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', 
   perView: 3,
   gap: 40,
   keyboard: true,
+  rewind: false,
   peek: {
     before: 0,
     after: 150
@@ -3879,7 +3880,54 @@ new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', 
         after: 250
       }
     },
-    992: {}
+    992: {
+      perView: 2,
+      gap: 40,
+      peek: {
+        before: 0,
+        after: 100
+      }
+    },
+    780: {
+      perView: 1,
+      gap: 40,
+      peek: {
+        before: 0,
+        after: 320
+      }
+    },
+    710: {
+      perView: 1,
+      gap: 40,
+      peek: {
+        before: 0,
+        after: 270
+      }
+    },
+    660: {
+      perView: 1,
+      gap: 40,
+      peek: {
+        before: 0,
+        after: 210
+      }
+    },
+    590: {
+      perView: 1,
+      gap: 40,
+      peek: {
+        before: 0,
+        after: 150
+      }
+    },
+    540: {
+      perView: 1,
+      gap: 0,
+      peek: {
+        before: 0,
+        after: 150
+      }
+    }
   }
 }).mount();
 

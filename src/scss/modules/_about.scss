@@ -28,6 +28,11 @@
     &__btn {
         grid-area: btn;
     }
+    &__button {
+        @include btn--hover;
+        height: 56px;
+        width: 230px;
+    }
     &__list {
         grid-area: list;
         background: #FFFFFF;

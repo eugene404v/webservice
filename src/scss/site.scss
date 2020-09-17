@@ -1,0 +1,26 @@
+@import "./modules/bootstrap-reboot.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "./modules/fonts";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/common";
+@import "./modules/btn";
+@import "./modules/header";
+@import "./modules/footer";
+//^common styles
+@import "./modules/promo";
+@import "./modules/site/promo";
+@import "./modules/site/task";
+@import "./modules/site/finally";
+@import "./modules/site/others";
+//
+@import "./modules/about";
+@import "./modules/services";
+@import "./modules/contacts";
+//
+//@import "./modules/";
+//@import "./modules/";
+//@import "./modules/";
+//@import "./modules/";
+//@import "./modules/";

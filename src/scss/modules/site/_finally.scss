@@ -1,0 +1,27 @@
+.finally {
+    &__wrapper {
+        @include wrapper;
+    }
+    &__title {
+        @include project-subtitle;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 144.5%;
+        max-width: 753px;
+        margin-bottom: 100px;
+    }
+    &__gallery {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__frame {
+        @include picture-frame;
+        box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.24);
+        &--mobile {
+            margin-left: 47px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.others {
+    &__wrapper {
+        @include wrapper;
+        display: flex;
+    }
+    &__sidebar {
+        margin-right: 100px;
+    }
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        position: relative;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: $hover;
+        margin-bottom: 47px;
+    }
+    &__category {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 22px;
+        &:hover,
+        &:active,
+        &--active {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $hover;
+        }
+    }
+    &__card {
+        color: #979696;
+        @include picture-frame;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-basis: 400px;
+        min-height: 282px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-right: 20px;
+        &:hover,
+        &:active {
+            & .others__type {
+                color: #979696;
+            }
+            & .others__link {
+                //font-weight: bold;
+                transition: .5s;
+            }
+            & .others__svg {
+                fill: $hover;
+                transform: rotate(-45deg);
+                transition: .5s;
+            }
+        }
+    }
+    &__svg {
+        width: 31px;
+        height: 18px;
+        transition: .5s;
+    }
+    &__link {
+        transition: .5s;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__img {
+        margin-left: auto;
+    }
+    &__more {
+        position: absolute;
+        background-color: transparent;
+        padding-right: 0;
+        padding-left: 0;
+        width: 167px;
+        display: flex;
+        justify-content: space-between;
+        bottom: -60px;
+        right: 0;
+    }
+}

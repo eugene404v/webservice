@@ -1,0 +1,35 @@
+.promo {
+    &__wrapper--site {
+        grid-template-columns: 105px 2fr 3fr;
+        grid-template-rows: 100px auto;
+        grid-row-gap: 0;
+    }
+    &__category {
+        @include section-name;
+        margin-bottom: 20px;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 135%;
+    }
+    &__btn {
+        margin-top: 20px;
+    }
+    &__button {
+        width: 177px;
+        box-shadow: 0px 4px 15px rgba(216, 100, 17, 0.4)
+    }
+    &__frame {
+        @include picture-frame;
+        box-shadow: -1px 8px 30px 3px rgba(243, 110, 15, 0.18);
+        width: fit-content;
+    }
+    &__screenshot {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__soc--site {
+        padding-top: 25px;
+    }
+}

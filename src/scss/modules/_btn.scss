@@ -45,6 +45,12 @@
     border: none;
 }
 
+@mixin btn--down {
+    &::after {
+        transform: rotate(90deg);
+    }
+}
+
 .btn {
     @include btn;
     &--hover,
@@ -62,5 +68,8 @@
     }
     &--noborder {
         @include btn--noborder;
+    }
+    &--down {
+        @include btn--down
     }
 }

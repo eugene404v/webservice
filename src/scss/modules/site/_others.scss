@@ -1,15 +1,18 @@
 .others {
+    margin-top: 160px;
+    margin-bottom: 100px;
     &__wrapper {
         @include wrapper;
         display: flex;
     }
     &__sidebar {
-        margin-right: 100px;
+        margin-right: 90px;
+        width: 240px;
     }
     &__content {
         display: flex;
-        flex-grow: 1;
         position: relative;
+        flex-basis: content;
     }
     &__title {
         font-weight: 600;
@@ -41,6 +44,7 @@
         align-items: flex-start;
         justify-content: space-between;
         flex-basis: 400px;
+        width: 400px;
         min-height: 282px;
         font-weight: 500;
         font-size: 16px;
@@ -87,6 +91,51 @@
         display: flex;
         justify-content: space-between;
         bottom: -60px;
-        right: 0;
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .others {
+        &__card {
+            display: none;
+            &:first-child {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .others {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__sidebar {
+            margin-right: 0;
+            width: 100%;
+        }
+        &__title {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__categories {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__category {
+            padding: 3px 7px 6px 7px;
+            margin-bottom: 15px;
+            &--active {
+                background-color: $hover;
+                border-radius: 21px;
+                color: #fff;
+            }
+        }
+        &__card {
+            width: 80vw;
+            margin-right: 0;
+        }
     }
 }

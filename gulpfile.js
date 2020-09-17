@@ -146,7 +146,7 @@ gulp.task('compress', function(done) {
 
 
 gulp.task('watch', function() {
-    watch(['./dist/*.html', './dist/css/**/*.css'], gulp.parallel(browserSync.reload));
+    watch([`${dist}*.html`, `${dist}css/**/*.css`], gulp.parallel(browserSync.reload));
     watch('./src/scss/**/*.scss', function() {
         setTimeout(gulp.parallel('sass'), 1000);
     });

@@ -9,43 +9,80 @@
     <title>Веб-сервис</title>
 </head>
 
-
+<script src="https://api-maps.yandex.ru/2.1/?apikey=15c2f5b6-46ce-4480-8c2f-e97ba31ca255&lang=ru_RU" type="text/javascript">
+</script>
 
 <body>
     <header class="header">
     <div class="header__wrapper">
-        <a href="#" class="header__logo"><img src="./img/logo.png" alt="logo"></a>
-        <button class="header__btn"></button>
+        <div class="header__more">
+            <a href="#" class="header__logo"><img src="./img/logo.png" alt="logo"></a>
+            <div class="more">
+                <p class="more__title">Ещё сайты :</p>
+                <ul class="more__list">
+                    <li class="more__item">
+                        <p class="more__name">Название сайта 1
+                            <a href="http://franchise-business-forum.ru/" class="more__link" target="_blank">http://franchise-business-forum.ru/</a></p>
+                    </li>
+                    <li class="more__item">
+                        <p class="more__name">Название сайта 2
+                            <a href="http://franchise-business-forum.ru/" class="more__link" target="_blank">http://franchise-business-forum.ru/</a></p>
+                    </li>
+                    <li class="more__item">
+                        <p class="more__name">Название сайта 3
+                            <a href="http://franchise-business-forum.ru/" class="more__link" target="_blank">http://franchise-business-forum.ru/</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header__contacts--mobile">
+            <p class="header__contact header__contact--address header__contact--mobile">СПБ, пер. Либавский, 5/3</p>
+            <a href="tel:+78124099200" class="header__contact header__contact--phone">+7 (812) 40-99-200</a>
+        </div>
         <div class="header__container">
             <nav>
                 <ul class="header__nav">
-                    <li class="header__item">
-                        <a href="#" class="header__link">о нас</a>
-                    </li>
-                    <li class="header__item">
+
+                    <li class="header__item header__subheader">
                         <a href="" class="header__link">портфолио</a>
                     </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link header__subheader">услуги</a>
-                        <!--<div class="header__submenu">
+                    <li class="header__item header__subheader">
+                        <a href="#" class="header__link">услуги</a>
+                        <div class="header__submenu">
                             <a href="" class="header__sublink">разработка сайтов</a>
                             <a href="" class="header__sublink">разработка erp - систем</a>
-                        </div>-->
+                        </div>
                     </li>
-                    <li class="header__item">
-                        <a href="" class="header__link header__subheader">продукты</a>
-                        <!--<div class="header__submenu">
+                    <li class="header__item header__subheader">
+                        <a href="" class="header__link">продукты</a>
+                        <div class="header__submenu">
                             <a href="" class="header__sublink">erp-система</a>
                             <a href="" class="header__sublink">изготовление эцп</a>
                             <a href="" class="header__sublink">cms - система</a>
-                        </div>-->
+                        </div>
                     </li>
-                    <li class="header__item">
+                    <li class="header__item header__item--mobile">
+                        <a href="#" class="header__link">о нас</a>
+                    </li>
+                    <li class="header__item header__item--mobile">
                         <a href="" class="header__link">контакты</a>
+                    </li>
+                    <li class="header__item header__item--mobile">
+                        <a href="" class="header__link">типовые договора</a>
+                    </li>
+                    <li class="header__item header__item--mobile">
+                        <a href="" class="header__link">реквизиты</a>
+                    </li>
+                    <li class="header__item header__item--mobile">
+                        <a href="" class="header__link">личный кабинет</a>
                     </li>
                 </ul>
             </nav>
             <p class="header__contact header__contact--address">СПБ, пер. Либавский, 5/3</p>
+            <!--<div class="header__map">
+                <div id="map" width="220" height="220"></div>
+            </div>-->
             <a href="mailto:info@serviceweb.su" class="header__contact header__contact--email">info@serviceweb.su</a>
             <a href="tel:+78124099200" class="header__contact header__contact--phone">+7 (812) 40-99-200</a>
             <ul class="header__soc">
@@ -61,9 +98,22 @@
 
             </ul>
         </div>
+        <div class="header__right">
+            <button class="header__btn"></button>
+            <div class="header__submenu header__submenu--main ">
+                <a href="#" class="header__sublink">о нас</a>
+                <a href="#" class="header__sublink">контакты</a>
+                <a href="#" class="header__sublink">типовые договора</a>
+                <a href="#" class="header__sublink">реквизиты</a>
+                <a href="#" class="header__sublink">личный кабинет</a>
+            </div>
+        </div>
+
+
     </div>
 </header>
     <main>
+
 
         <div><section class="promo">
     <div class="promo__wrapper">
@@ -122,7 +172,7 @@
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
                     <li>
-                        <div class="proj proj--active glide__slide">
+                        <div class="proj glide__slide">
                             <h5 class="proj__subtitle">интернет-магазин </h5>
                             <h4 class="proj__title">“ОПТИМУС”</h4>
                             <img src="./img/optimus.png" alt="" class="proj__img">
@@ -223,31 +273,37 @@
             <p class="services__descr">Специализируемся на сложных процессах и точечных решениях для вашего бизнеса.</p>
         </div>
         <ul class="services__list">
-            <li class="serv serv--dev">
-                <h4 class="serv__title">разрабатываем</h4>
-                <ul class="serv__list">
-                    <li class="serv__item">корпоративные сайты</li>
-                    <li class="serv__item">интернет-магазины</li>
-                    <li class="serv__item">мобильные приложения</li>
-                    <li class="serv__item">erp-системы</li>
-                </ul>
-                <a href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></a>
+            <li class="services__item">
+                <a class="serv serv--dev" href="#">
+                    <h4 class="serv__title">разрабатываем</h4>
+                    <ul class="serv__list">
+                        <li class="serv__item">корпоративные сайты</li>
+                        <li class="serv__item">интернет-магазины</li>
+                        <li class="serv__item">мобильные приложения</li>
+                        <li class="serv__item">erp-системы</li>
+                    </ul>
+                    <p href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></p>
+                </a>
             </li>
-            <li class="serv serv--test">
-                <h4 class="serv__title">тестируем</h4>
-                <ul class="serv__list">
-                    <li class="serv__item">web-приложения</li>
-                    <li class="serv__item">нагрузочное тестирование</li>
-                </ul>
-                <a href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></a>
+            <li class="services__item">
+                <a class="serv serv--test" href="#">
+                    <h4 class="serv__title">тестируем</h4>
+                    <ul class="serv__list">
+                        <li class="serv__item">web-приложения</li>
+                        <li class="serv__item">нагрузочное тестирование</li>
+                    </ul>
+                    <p href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></p>
+                </a>
             </li>
-            <li class="serv serv--increase">
-                <h4 class="serv__title">повышаем <br> эффективность</h4>
-                <ul class="serv__list">
-                    <li class="serv__item">внедрение CRM</li>
-                    <li class="serv__item">внедрение систем учёта</li>
-                </ul>
-                <a href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></a>
+            <li class="services__item">
+                <a class="serv serv--increase" href="#">
+                    <h4 class="serv__title">повышаем <br> эффективность</h4>
+                    <ul class="serv__list">
+                        <li class="serv__item">внедрение CRM</li>
+                        <li class="serv__item">внедрение систем учёта</li>
+                    </ul>
+                    <p href="#" class="serv__link">Подробнее<svg class="serv__svg"><use xlink:href="#arrow"></use></svg></p>
+                </a>
             </li>
         </ul>
 

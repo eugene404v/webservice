@@ -3777,10 +3777,13 @@ var Glide$1 = function (_Core) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
+/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
 
 
-Object(_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+Object(_modules_hamburger__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 /***/ }),
 
@@ -3796,10 +3799,16 @@ __webpack_require__.r(__webpack_exports__);
 var openMenu = function openMenu() {
   var menuTrigger = document.querySelector('.header__btn');
   var menu = document.querySelector('.header__container');
+  var rightMenu = document.querySelector('.header__submenu--main');
   menuTrigger.addEventListener('click', function () {
-    menu.classList.toggle('header__container--opened');
-    menuTrigger.classList.toggle('header__btn--opened');
-    document.body.classList.toggle('overflow_hidden');
+    if (document.body.clientWidth > 991) {
+      rightMenu.classList.toggle('header__submenu--main--opened');
+      menuTrigger.classList.toggle('header__btn--opened');
+    } else {
+      menu.classList.toggle('header__container--opened');
+      menuTrigger.classList.toggle('header__btn--opened');
+      document.body.classList.toggle('overflow_hidden');
+    }
   });
 };
 
@@ -3848,7 +3857,7 @@ new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', 
         after: 150
       }
     },
-    1430: {
+    1450: {
       perView: 2,
       gap: 40,
       peek: {
@@ -3930,6 +3939,27 @@ new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', 
     }
   }
 }).mount();
+
+/***/ }),
+
+/***/ "./src/js/modules/stickyHeader.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/stickyHeader.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var header = document.querySelector('.header');
+
+window.onscroll = function () {
+  if (document.body.clientWidth > 991) {
+    if (window.pageYOffset >= 100) {
+      header.classList.add('header--sticky');
+    } else {
+      header.classList.remove('header--sticky');
+    }
+  }
+};
 
 /***/ })
 

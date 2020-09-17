@@ -11,6 +11,7 @@ a {
     text-decoration: none;
     display: block;
     box-sizing: border-box;
+    color: $hover;
     &:hover {
         text-decoration: none;
         color: $hover;
@@ -61,16 +62,6 @@ button {
 
 .svg-sprite {
     display: none;
-}
-
-main {
-    padding-top: 95px;
-}
-
-@media screen and (max-width: 991px) {
-    main {
-        padding-top: 75px;
-    }
 }
 
 .glide__slides {

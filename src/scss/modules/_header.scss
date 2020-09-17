@@ -9,6 +9,9 @@
     top: 0;
     left: 0;
     right: 0;
+    &--sticky {
+        background-color: red;
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -16,7 +19,6 @@
         @include wrapper;
     }
     &__btn {
-        display: none;
         &:before,
         &:after {
             display: block;
@@ -71,6 +73,10 @@
             width: 50%;
         }
     }
+    &__map {
+        width: 200px;
+        height: 200px;
+    }
     &__contact {
         color: $dark-text;
         transition: .5s;
@@ -100,11 +106,9 @@
         display: block;
     }
     &__submenu {
-        display: none;
         background-color: #fff;
         box-shadow: -6px 9px 19px -4px rgba(0, 0, 0, 0.19);
         border-radius: 0px 0px 5px 5px;
-        left: -50px;
         top: 25px;
         position: absolute;
         padding: 14px 8px 15px 8px;
@@ -113,9 +117,20 @@
         &--opened {
             display: block;
         }
+        &--main {
+            right: 0;
+            top: 35px;
+            text-align: right;
+            width: 180px;
+            padding: 10px;
+        }
     }
     &__sublink {
         color: $dark-text;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 13px;
         &--active,
         &:active,
         &:hover {
@@ -124,6 +139,40 @@
     }
     &__soc {
         display: none;
+    }
+    &__right {
+        position: relative;
+    }
+}
+
+.more {
+    position: absolute;
+    top: 95px;
+    background-color: #fff;
+    box-shadow: 10px 9px 19px -4px rgba(0, 0, 0, .19);
+    border-radius: 0px 0px 10px 10px;
+    padding-left: 7px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 15px;
+        opacity: .6;
+        &:hover,
+        &:active {
+            opacity: 1;
+        }
+    }
+    &__link {
+        color: $hover;
     }
 }
 

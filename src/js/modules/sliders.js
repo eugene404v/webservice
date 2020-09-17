@@ -30,7 +30,7 @@ new Glide('.projects__slider', {
                 after: 150
             }
         },
-        1430: {
+        1450: {
             perView: 2,
             gap: 40,
             peek: {

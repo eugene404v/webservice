@@ -16,7 +16,7 @@ const pug = require('gulp-pug');
 const webpack = require("webpack-stream");
 
 
-const dist = "./dist/";
+const dist = "./docs/";
 
 
 
@@ -35,14 +35,14 @@ gulp.task('html', function(callback) {
         .pipe(fileinclude({
             prefix: '@@'
         }))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest(dist))
     callback();
 });
 
 gulp.task('pug', function() {
     gulp.src('src/pug/*.pug')
         .pipe(pug({ pretty: '\t' }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest(dist))
 });
 
 gulp.task('sass', function(callback) {
@@ -67,7 +67,7 @@ gulp.task('sass', function(callback) {
             sourceMap: true,
             debug: true
         }))
-        .pipe(gulp.dest('./dist/css/'))
+        .pipe(gulp.dest(`${dist}css`))
     callback();
 });
 
@@ -140,7 +140,7 @@ gulp.task('compress', function(done) {
                 ]
             })
         ]))
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest(`${dist}img`))
     done();
 });
 
@@ -158,7 +158,7 @@ gulp.task('watch', function() {
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "./dist/"
+            baseDir: dist
         }
     });
 });

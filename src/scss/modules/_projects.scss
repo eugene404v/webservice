@@ -44,7 +44,14 @@
         overflow-x: hidden;
         align-items: flex-end;
         padding-left: 20px;
+        & .glide--dragging a:not([href]) {
+            color: pink !important;
+        }
     }
+}
+
+a:not([href]) {
+    color: pink !important;
 }
 
 .proj {
@@ -67,9 +74,7 @@
             z-index: 3 !important;
         }
     }
-    &__slide--active .proj,
-    &:active,
-    &:hover {
+    &__slide--active .proj {
         padding-top: 34px;
         height: 480px;
         box-shadow: -1px 8px 30px 3px rgba(243, 110, 15, 0.22);
@@ -107,19 +112,16 @@
     }
     &__link {
         color: rgba(255, 255, 255, .5);
+        font-weight: bold;
         &:hover {
             color: $hover;
         }
     }
-    &__slide--active .proj__svg,
-    &:active .proj__svg,
-    &:hover .proj__svg {
+    &__slide--active .proj__svg {
         fill: $hover;
         transform: rotate(-45deg);
     }
-    &__slide--active .proj__link,
-    &:active .proj__link,
-    &:hover .proj__link {
+    &__slide--active .proj__link {
         color: $hover;
     }
     &:last-child {

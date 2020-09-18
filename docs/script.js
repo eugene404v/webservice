@@ -3816,9 +3816,14 @@ menuTrigger.addEventListener('click', function () {
 var mapBtn = document.querySelector('.header__address p');
 var map = document.querySelector('.header__map');
 var main = document.querySelector('main');
+var closeMap = document.querySelector('.map__close');
 mapBtn.addEventListener('click', function () {
   mapBtn.classList.toggle('header__contact--address--opened');
   map.classList.toggle('header__map--opened');
+});
+closeMap.addEventListener('click', function () {
+  mapBtn.classList.remove('header__contact--address--opened');
+  map.classList.remove('header__map--opened');
 }); //close all
 
 main.addEventListener('click', function () {

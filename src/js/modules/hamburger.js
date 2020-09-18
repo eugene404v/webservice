@@ -20,10 +20,16 @@ menuTrigger.addEventListener('click', () => {
 const mapBtn = document.querySelector('.header__address p')
 const map = document.querySelector('.header__map')
 const main = document.querySelector('main')
+const closeMap = document.querySelector('.map__close')
 
 mapBtn.addEventListener('click', () => {
     mapBtn.classList.toggle('header__contact--address--opened')
     map.classList.toggle('header__map--opened')
+})
+
+closeMap.addEventListener('click', () => {
+    mapBtn.classList.remove('header__contact--address--opened')
+    map.classList.remove('header__map--opened')
 })
 
 //close all

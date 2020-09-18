@@ -2,13 +2,13 @@
     background-color: #fff;
     box-shadow: 0px 16px 27px rgba(25, 26, 30, 0.06);
     padding-top: 10px;
-    position: fixed;
+    position: sticky;
     z-index: 10;
     top: 0;
     left: 0;
     right: 0;
     &--sticky {
-        position: fixed;
+        position: sticky;
         transition: .5s;
         & .header__wrapper {
             justify-content: start;

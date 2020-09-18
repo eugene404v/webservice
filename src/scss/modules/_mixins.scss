@@ -50,9 +50,12 @@
     color: $hover;
 }
 
-@mixin fsz($bg: 18px, $sm:14px) {
+@mixin fsz($bg: 18px, $sm:14px, $xs:14px) {
     font-size: $bg;
     @media screen and (max-width: 991px) {
         font-size: $sm;
+    }
+    @media screen and (max-width: 610px) {
+        font-size: $xs;
     }
 }

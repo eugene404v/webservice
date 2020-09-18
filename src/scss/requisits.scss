@@ -1,0 +1,63 @@
+@import "./modules/bootstrap-reboot.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "./modules/fonts";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/common";
+@import "./modules/btn";
+@import "./modules/header";
+@import "./modules/footer";
+//^common styles
+.requisits {
+    &__wrapper {
+        @include wrapper;
+    }
+    &__header {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        color: $hover;
+        margin-right: 45px;
+    }
+    &__headline {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__file {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 15px 0px rgba(243, 110, 15, 0.4);
+        background-image: url('./../img/copy-file.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        margin-bottom: 24px;
+    }
+    &__type {
+        flex-basis: 42%;
+        font-size: 24px;
+        @include fsz(24px,
+        20px,
+        18px);
+        font-weight: 600;
+        line-height: 29px;
+    }
+    &__content {
+        flex-basis: 58%;
+        @include fsz(24px,
+        20px,
+        18px);
+        font-weight: 400;
+        line-height: 31px;
+    }
+    &__link {
+        display: inline;
+    }
+}

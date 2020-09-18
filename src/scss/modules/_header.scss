@@ -2,13 +2,13 @@
     background-color: #fff;
     box-shadow: 0px 16px 27px rgba(25, 26, 30, 0.06);
     padding-top: 10px;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
     right: 0;
     &--sticky {
-        position: sticky;
+        position: fixed;
         transition: .5s;
         & .header__wrapper {
             justify-content: start;
@@ -130,9 +130,19 @@
             width: 50%;
         }
     }
+    &__address {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
     &__map {
-        width: 200px;
-        height: 200px;
+        position: absolute;
+        bottom: -175px;
+        display: none;
+        &--opened {
+            display: block;
+        }
     }
     &__contact {
         color: $dark-text;
@@ -152,8 +162,32 @@
         &:hover {
             color: $hover;
         }
-        &--address:hover {
-            color: $dark-text;
+        &--address {
+            position: relative;
+            padding-right: 25px;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 7px;
+                right: 0;
+                width: 15px;
+                height: 9px;
+                background-image: url('./../img/header-expand.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: .5;
+                transition: .5s;
+            }
+            &:hover,
+            &--opened {
+                color: $dark-text;
+                cursor: pointer;
+                &:after {
+                    transform: rotate(180deg);
+                    opacity: 1;
+                }
+            }
         }
         &:before {
             display: block;
@@ -301,6 +335,46 @@
     &__link {
         color: $hover;
     }
+}
+
+.map {
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 0;
+    background: #fff;
+    box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+    &__close {
+        width: 7px;
+        height: 7px;
+        padding: 0;
+        background-image: url('./../img/map-close.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: calc(100% - 7px);
+        margin-bottom: 10px;
+    }
+    &__descr {
+        padding-top: 10px;
+        padding-left: 25px;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 18px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $hover;
+        }
+    }
+}
+
+#map {
+    width: 245px;
+    height: 112px;
 }
 
 @media screen and (max-width: 1440px) {

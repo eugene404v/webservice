@@ -1,7 +1,7 @@
-//import './modules/sliders'
+import './modules/sliders'
 import './modules/stickyHeader'
-import openMenu from './modules/hamburger'
+import './modules/hamburger'
 
-openMenu()
+//import './modules/scroll.js'
 
-import './modules/scroll.js'
+import './modules/map'

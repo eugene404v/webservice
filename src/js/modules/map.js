@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     ymaps.ready(function() {
-        var myMap = new ymaps.Map('map', {
-                center: [59.914437, 30.271734],
-                zoom: 29
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
 
-            // Создаём макет содержимого.
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        var myMap = new ymaps.Map('map', {
+            center: [59.914540, 30.271627],
+            zoom: 16,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        })
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             ),
 
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
                 // Своё изображение иконки метки.
-                //iconImageHref: 'images/myIcon.gif',
+                iconImageHref: './img/header-map.svg',
                 // Размеры метки.
                 iconImageSize: [30, 42],
                 // Смещение левого верхнего угла иконки относительно
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#imageWithContent',
                 // Своё изображение иконки метки.
-                //iconImageHref: 'images/ball.png',
+                iconImageHref: './img/header-map.svg',
                 // Размеры метки.
                 iconImageSize: [48, 48],
                 // Смещение левого верхнего угла иконки относительно
@@ -52,5 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         myMap.geoObjects
             .add(myPlacemark)
             .add(myPlacemarkWithContent);
+
     });
 })

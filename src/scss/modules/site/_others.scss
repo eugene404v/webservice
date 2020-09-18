@@ -6,7 +6,7 @@
         display: flex;
     }
     &__sidebar {
-        margin-right: 90px;
+        margin-right: 80px;
         width: 240px;
     }
     &__content {
@@ -33,6 +33,7 @@
             font-size: 18px;
             line-height: 22px;
             color: $hover;
+            cursor: pointer;
         }
     }
     &__card {

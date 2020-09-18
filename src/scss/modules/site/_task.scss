@@ -1,46 +1,79 @@
-.task {
-    &__wrapper {
-        @include wrapper;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__content {
-        flex-basis: 585px;
-    }
-    &__title {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 22px;
-        color: $hover;
-        margin-bottom: 20px;
-    }
-    &__text {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 144.5%;
-    }
-    &__list {
-        flex-basis: 48%;
-    }
-    &__item {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        position: relative;
-        padding-bottom: 10px;
-        padding-top: 5px;
-        &:after {
-            display: block;
-            content: '';
-            position: absolute;
-            bottom: 0;
-            width: 270px;
-            height: 1px;
-            background-color: #ddd;
+    .task {
+        padding-top: 78px;
+        &__wrapper {
+            @include wrapper;
+            max-width: 975px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__content {
+            flex-basis: 48%;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $hover;
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-weight: 500;
+            @include fsz;
+            line-height: 144.5%;
+        }
+        &__list {
+            flex-basis: 48%;
+        }
+        &__item {
+            font-weight: 600;
+            @include fsz(16px);
+            line-height: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            &:after {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 270px;
+                height: 1px;
+                background-color: #ddd;
+            }
+        }
+        &__option {
+            color: #858585;
+            margin-bottom: 10px;
         }
     }
-    &__option {
-        color: #858585;
-        margin-bottom: 10px;
+    
+    @media screen and (max-width: 1440px) {
+        .task {
+            &__wrapper {
+                max-width: 975px;
+            }
+        }
     }
-}
+    
+    @media screen and (max-width: 991px) {
+        .task {
+            &__wrapper {
+                @include wrapper;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 610px) {
+        .task {
+            &__wrapper {
+                flex-direction: column;
+            }
+            &__item {
+                text-align: center;
+                &:after {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }

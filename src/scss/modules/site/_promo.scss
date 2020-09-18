@@ -24,6 +24,7 @@
         @include picture-frame;
         box-shadow: -1px 8px 30px 3px rgba(243, 110, 15, 0.18);
         width: fit-content;
+        max-width: 100%;
     }
     &__screenshot {
         max-width: 100%;
@@ -31,5 +32,17 @@
     }
     &__soc--site {
         padding-top: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        &__wrapper--site {
+            grid-template-columns: 1fr;
+        }
+        &__works--site {
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }

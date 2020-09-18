@@ -49,3 +49,10 @@
     line-height: 22px;
     color: $hover;
 }
+
+@mixin fsz($bg: 18px, $sm:14px) {
+    font-size: $bg;
+    @media screen and (max-width: 991px) {
+        font-size: $sm;
+    }
+}

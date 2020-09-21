@@ -1,0 +1,126 @@
+@import "./modules/bootstrap-reboot.scss";
+@import "./modules/fonts";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/common";
+@import "./modules/btn";
+@import "./modules/header";
+@import "./modules/footer";
+//
+.portfolio {
+    &__wrapper {
+        @include wrapper;
+    }
+    &__headline {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__title {
+        @include fsz(40px, 40px, 34px);
+        color: $hover;
+    }
+    &__categories {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__category {
+        padding: 8px 9px 7px 10px;
+        border-radius: 22px;
+        margin-right: 20px;
+        @include fsz(16px, 18px, 14px);
+        font-weight: 500;
+        transition: .2s;
+        &--active,
+        &:active,
+        &:hover {
+            box-shadow: 4px 7px 24px 1px rgba(0, 0, 0, 0.13);
+            color: $hover;
+            cursor: pointer;
+            transition: .2s;
+        }
+    }
+    &__btn {
+        height: 52px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 15px 0px rgba(216, 100, 17, 0.4);
+        transition: .5s;
+        &:after {
+            background-image: url('./../img/arrow-repeat.svg');
+            background-position: center;
+            transition: .5s;
+        }
+        &:hover {
+            @include btn--hover;
+            &:after {
+                transition: .5s;
+                transform: rotate(450deg);
+            }
+        }
+    }
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        width: 310px;
+        margin-bottom: 50px;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__svg {
+        width: 31px;
+        height: 18px;
+        fill: $dark-text;
+        transition: .5s;
+    }
+    &__watch {
+        color: $dark-text;
+        transition: .5s;
+    }
+    &__link {
+        height: 425px;
+        width: 100%;
+        box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
+        padding: 20px 10px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover {
+            box-shadow: 0px 4px 15px rgba(216, 100, 17, 0.4);
+            & .works__svg {
+                transform: rotate(-45deg);
+                fill: $hover;
+                transition: .5s;
+            }
+            & .works__watch {
+                transition: .5s;
+                color: $hover;
+            }
+        }
+    }
+    &__picture {
+        margin-bottom: 70px;
+    }
+    &__img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .portfolio {
+        &__headline {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

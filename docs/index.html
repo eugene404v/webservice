@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
     <title>Веб-сервис</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=15c2f5b6-46ce-4480-8c2f-e97ba31ca255&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=15c2f5b6-46ce-4480-8c2f-e97ba31ca255&lang=ru_RU" type="text/javascript" defer></script>
 </head>
 
 
@@ -46,17 +46,17 @@
                 <ul class="header__nav">
 
                     <li class="header__item header__subheader">
-                        <a href="" class="header__link">портфолио</a>
+                        <a href="/portfolio.html" class="header__link">портфолио</a>
                     </li>
                     <li class="header__item header__subheader">
-                        <a href="#" class="header__link">услуги</a>
+                        <a href="/services.html" class="header__link">услуги</a>
                         <div class="header__submenu">
                             <a href="" class="header__sublink">разработка сайтов</a>
                             <a href="" class="header__sublink">разработка erp - систем</a>
                         </div>
                     </li>
                     <li class="header__item header__subheader">
-                        <a href="" class="header__link">продукты</a>
+                        <a href="/products.html" class="header__link">продукты</a>
                         <div class="header__submenu">
                             <a href="" class="header__sublink">erp-система</a>
                             <a href="" class="header__sublink">изготовление эцп</a>
@@ -154,7 +154,10 @@
         <div class="promo__works">
             <h3 class="promo__subtitle">последние работы :</h3>
             <div class="promo__pics">
-                <img src="./img/work.png" alt="" class="promo__img promo__img--main">
+                <a href="#" class="promo__lastwork promo__img promo__img--main">
+                    <p class="promo__type">веб-сайт</p>
+                    <p class="promo__name">ОАО “Ассоциация разработчиков и производителей систем мониторинга”</p>
+                </a>
                 <img src="./img/work2.png" alt="" class="promo__img promo__img--second">
             </div>
 

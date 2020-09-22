@@ -41,6 +41,9 @@
             cursor: pointer;
             transition: .2s;
         }
+        &:last-child {
+            margin-right: 0;
+        }
     }
     &__btn {
         height: 52px;

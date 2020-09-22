@@ -1,5 +1,36 @@
+    .promo {
+        overflow: hidden;
+        position: relative;
+        &__wrapper {
+            grid-template-columns: 55px 13fr 20fr;
+        }
+        &__subtext {
+            @include fsz(40px, 40px, 34px);
+            color: $hover;
+            font-weight: 700;
+            line-height: 49px;
+            margin-bottom: 0;
+        }
+        &__title {
+            @include fsz(24px, 20px, 17px);
+            line-height: 29px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        &__text {
+            max-width: 340px;
+            margin-bottom: 30px;
+        }
+        &__btn {
+            margin-top: 30px;
+        }
+        &__button {
+            width: 200px;
+            height: 56px;
+        }
+    }
+    
     .tabs {
-        margin-left: 40px;
         &__headers {
             display: flex;
             margin-bottom: 40px;
@@ -31,6 +62,7 @@
         &__link {
             margin-bottom: 20px;
             margin-right: 40px;
+            @include fsz(16px, 18px, 14px);
             & a {
                 color: $dark-text;
                 &:hover {
@@ -40,14 +72,17 @@
         }
         &__contents {
             position: relative;
+            height: 220px;
             &:after {
                 content: '';
+                z-index: 0;
                 display: block;
                 position: absolute;
                 width: 410px;
                 height: 223px;
                 border-radius: 27px;
                 right: 0;
+                top: 0;
                 background-image: url('./../img/serv-bg.svg');
                 box-shadow: 7px 11px 34px 1px rgba(0, 0, 0, 0.13);
             }
@@ -58,9 +93,118 @@
             opacity: 0;
             transition: 1s;
             &--active {
+                position: relative;
                 transition: 1s;
                 z-index: 2;
                 opacity: 1;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1100px) {
+        .promo {
+            &__wrapper {
+                grid-template-areas: "promo" "btn" "works";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            &__content {
+                text-align: left;
+                align-items: flex-start;
+                margin-bottom: 0;
+            }
+            &__text {
+                position: relative;
+                z-index: 5;
+                margin-bottom: 25px;
+            }
+            &__works {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            &__soc {
+                display: none;
+            }
+            &__btn {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+        }
+        .tabs {
+            &__contents {
+                height: 160px;
+                &:after {
+                    top: -330px;
+                    right: 120px;
+                }
+            }
+            &__link {
+                width: fit-content;
+                padding-right: 30px;
+                position: relative;
+                margin-bottom: 15px;
+                & a {
+                    border-bottom: 1px solid rgba(151, 150, 150, 0.5);
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 22px;
+                    height: 15px;
+                    background-image: url('./../img/arrow-hover.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 991px) {
+        .tabs {
+            &__contents {
+                &:after {
+                    right: 0;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 610px) {
+        .promo {
+            &__btn {
+                display: block;
+            }
+            &__button {
+                position: relative;
+                z-index: 5;
+            }
+            &__text {
+                width: 100%;
+            }
+            &__content {
+                width: 100%;
+            }
+        }
+        .tabs {
+            &__headers {
+                flex-wrap: wrap;
+            }
+            &__links {
+                height: auto;
+            }
+            &__contents {
+                height: auto;
+                &:after {
+                    right: -140px;
+                    top: -360px;
+                }
+            }
+            &__link {
+                margin-right: 0;
             }
         }
     }

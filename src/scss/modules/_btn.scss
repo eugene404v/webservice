@@ -47,29 +47,37 @@
 
 @mixin btn--down {
     &::after {
+        transition: .3s;
         transform: rotate(90deg);
+    }
+    &:hover {
+        color: #fff;
+        &::after {
+            transition: .3s;
+            background-position: right center;
+        }
     }
 }
 
 .btn {
     @include btn;
-    &--hover,
+    /*&--hover,
     &--active,
     &:hover,
     &:active {
         @include btn--hover;
-    }
+    }*/
     &--hover {
         @include btn--hover;
-        &:hover,
+        /*&:hover,
         &:active {
             @include btn;
-        }
+        }*/
     }
     &--noborder {
         @include btn--noborder;
     }
     &--down {
-        @include btn--down
+        @include btn--down;
     }
 }

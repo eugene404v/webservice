@@ -127,13 +127,13 @@
     }
     &__type {
         font-weight: 600;
-        @include fsz(16pz,
-        16pz,
+        @include fsz(16px,
+        16px,
         14px);
     }
     &__name {
-        @include fsz(16pz,
-        16pz,
+        @include fsz(16px,
+        16px,
         14px);
         font-weight: 600;
         line-height: 20px;

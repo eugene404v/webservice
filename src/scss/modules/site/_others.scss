@@ -63,6 +63,7 @@
             & .others__svg {
                 fill: $hover;
                 transform: rotate(-45deg);
+                opacity: 1;
                 transition: .5s;
             }
         }
@@ -71,6 +72,7 @@
         width: 31px;
         height: 18px;
         transition: .5s;
+        opacity: .5;
     }
     &__link {
         transition: .5s;

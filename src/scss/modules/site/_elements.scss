@@ -1,5 +1,8 @@
 .elements {
     position: relative;
+    background-color: $bg;
+    padding-bottom: 80px;
+    padding-top: 70px;
     &__title {
         text-align: center;
         font-size: 35px;
@@ -19,14 +22,25 @@
         justify-content: space-between;
     }
     &__btn {
-        background-image: url('./../img/arrow-hover.svg');
+        background-image: url('./../img/arrow-ui.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        width: 38px;
+        width: 37px;
         height: 22px;
+        transform: scaleX(-1);
+        &:hover,
+        &:active {
+            background-image: url('./../img/arrow-ui-hover.svg');
+            transform: scaleX(1);
+        }
         &--prev {
-            transform: scaleX(-1);
+            transform: scaleX(1);
+            width: 38px;
+            &:hover,
+            &:active {
+                transform: scaleX(-1);
+            }
         }
     }
 }
@@ -39,7 +53,16 @@
 
 .swiper-slide {
     width: 555px;
+    border-radius: 15px;
+    box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
     & img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .swiper-slide {
+        width: 80%;
     }
 }

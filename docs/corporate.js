@@ -13187,7 +13187,6 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_5__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_5__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_5__["Pagination"]]);
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.swiper-container', {
-  direction: 'vertical',
   spaceBetween: 10,
   pagination: {
     el: '.swiper-pagination'
@@ -13195,6 +13194,19 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.swiper-contain
   navigation: {
     nextEl: '.steps__arrow--next',
     prevEl: '.steps__arrow--prev'
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      direction: 'horizontal'
+    },
+    610: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      direction: 'vertical'
+    }
   }
 });
 var pics = document.querySelectorAll('.steps__marker');

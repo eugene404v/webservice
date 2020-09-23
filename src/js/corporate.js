@@ -7,7 +7,7 @@ import Swiper, { Navigation, Pagination } from 'swiper'
 Swiper.use([Navigation, Pagination])
 
 const swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
+
     spaceBetween: 10,
     pagination: {
         el: '.swiper-pagination',
@@ -17,6 +17,20 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.steps__arrow--next',
         prevEl: '.steps__arrow--prev',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            direction: 'horizontal'
+        },
+
+        610: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            direction: 'vertical'
+        }
+    }
 })
 
 const pics = document.querySelectorAll('.steps__marker')

@@ -7,20 +7,9 @@
     right: 0;
     box-shadow: 0px 16px 27px rgba(25, 26, 30, 0.06);
     background-color: #fff;
-    &--sticky {
+    /*&--sticky {
         position: sticky;
         transition: .5s;
-        & .header__wrapper {
-            justify-content: start;
-            transition: .5s;
-        }
-        & .header__logo {
-            width: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: .5s;
-            margin-right: 0;
-        }
         & .header__container {
             margin-left: 0;
             flex-basis: 75%;
@@ -31,7 +20,7 @@
         & .header__link {
             margin-right: 35px;
         }
-    }
+    }*/
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -165,7 +154,7 @@
         &--address {
             position: relative;
             padding-right: 25px;
-            &:after {
+            /*&:after {
                 content: '';
                 display: block;
                 position: absolute;
@@ -178,6 +167,10 @@
                 background-size: contain;
                 opacity: .5;
                 transition: .5s;
+            }*/
+            &:before {
+                position: static !important;
+                top: -15px !important;
             }
             &:hover,
             &--opened {
@@ -194,7 +187,7 @@
             content: "";
             position: absolute;
             left: 0;
-            top: -3px;
+            top: -2px;
             width: 30px;
             height: 30px;
             border-radius: 50%;

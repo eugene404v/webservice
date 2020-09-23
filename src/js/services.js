@@ -13,3 +13,33 @@ headers.forEach((el, i) => {
         contents[i].classList.add('tabs__content--active')
     })
 })
+
+//slider
+
+import Swiper, { Navigation } from 'swiper'
+
+Swiper.use([Navigation])
+
+const swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.akkr__btn--next',
+        prevEl: '.akkr__btn--prev',
+    },
+
+    spaceBetween: 0,
+    loop: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1
+        },
+
+
+        800: {
+            slidesPerView: 3
+        },
+        1100: {
+            slidesPerView: 4,
+        }
+    }
+})

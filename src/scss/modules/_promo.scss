@@ -220,7 +220,7 @@
     }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 520px) {
     .promo {
         &__title {
             font-size: 34px;
@@ -252,6 +252,20 @@
             &--second {
                 max-width: 60%;
             }
+        }
+        &__lastwork {
+            width: 90%;
+            max-width: none;
+            margin-right: 30px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .promo {
+        &__lastwork {
+            height: 170px;
         }
     }
 }

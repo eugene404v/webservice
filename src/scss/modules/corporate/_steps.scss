@@ -1,0 +1,179 @@
+.steps {
+    background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    padding-top: 53px;
+    padding-bottom: 45px;
+    &__wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 826px;
+        display: grid;
+        grid-template-columns: 326px 40px 320px;
+        grid-column-gap: 70px;
+        grid-template-rows: 83px auto;
+        grid-template-areas: "circle arrows title" "circle  arrows slider";
+    }
+    &__container {
+        position: relative;
+        width: 326px;
+        height: 326px;
+        grid-area: circle;
+    }
+    &__marker {
+        transition: .3s;
+        padding: 5px;
+        background-color: #17253E;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        color: #979696;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        &--active {
+            transition: .3s;
+            background-color: $hover;
+            color: #fff;
+        }
+        &:nth-child(1) {
+            top: -10px;
+            left: 158px;
+        }
+        &:nth-child(2) {
+            top: 65px;
+            left: 285px;
+        }
+        &:nth-child(3) {
+            top: auto;
+            bottom: 77px;
+            left: 290px;
+        }
+        &:nth-child(4) {
+            top: auto;
+            bottom: -10px;
+            left: 158px;
+        }
+        &:nth-child(5) {
+            top: auto;
+            bottom: 80px;
+            left: 10px;
+        }
+        &:nth-child(6) {
+            top: 65px;
+            left: 10px;
+        }
+    }
+    &__icons {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-image: url('./../img/steps-shadow.svg');
+        background-position: center;
+        background-size: contain;
+    }
+    &__icon {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        z-index: 0;
+        transition: .3s;
+        &:nth-child(1) {
+            background-image: url('./../img/steps1.svg');
+        }
+        &:nth-child(2) {
+            background-image: url('./../img/steps2.svg');
+        }
+        &:nth-child(3) {
+            background-image: url('./../img/steps3.svg');
+        }
+        &:nth-child(4) {
+            background-image: url('./../img/steps4.svg');
+        }
+        &:nth-child(5) {
+            background-image: url('./../img/steps5.svg');
+        }
+        &:nth-child(6) {
+            background-image: url('./../img/steps6.svg');
+        }
+        &--active {
+            z-index: 2;
+            opacity: 1;
+            transition: .3s;
+        }
+    }
+    &__slide {
+        height: 201px;
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    &__slider {
+        width: 300px;
+        height: 191px;
+        grid-area: slider;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &__number {
+        font-size: 53px;
+        line-height: 1;
+        color: $hover;
+        margin-right: 10px;
+    }
+    &__text {
+        font-size: 18px;
+        margin-bottom: 11px;
+        color: #fff;
+    }
+    &__subtext {
+        font-size: 16px;
+        color: #fff;
+    }
+    &__title {
+        grid-area: title;
+        font-size: 35px;
+        color: #fff;
+    }
+    &__arrows {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: arrows;
+        height: 170px;
+        margin-top: 70px;
+    }
+    &__arrow {
+        position: static;
+        transform: rotate(90deg);
+        height: 40px;
+        width: 21px;
+        background-image: url('./../img/akkr-slider.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: .7;
+        cursor: pointer;
+        &--next {
+            transform: rotate(270deg);
+        }
+        &:hover,
+        &:active {
+            opacity: 1;
+        }
+        &.swiper-button-disabled {
+            opacity: .3;
+        }
+    }
+}
+
+#svg {
+    transition: .3s;
+}

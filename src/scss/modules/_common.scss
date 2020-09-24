@@ -3,6 +3,11 @@ body {
     color: $dark-text;
 }
 
+button:active,
+button:focus {
+    outline: transparent;
+}
+
 .overflow_hidden {
     overflow: hidden;
 }

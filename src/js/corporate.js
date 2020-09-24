@@ -1,17 +1,13 @@
-import './modules/stickyHeader'
-import './modules/hamburger'
-import './modules/map'
+import './common'
 
-import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation } from 'swiper'
 
-Swiper.use([Navigation, Pagination])
+Swiper.use([Navigation])
 
 const swiper = new Swiper('.swiper-container', {
-
+    loop: true,
     spaceBetween: 10,
-    pagination: {
-        el: '.swiper-pagination',
-    },
+
 
     navigation: {
         nextEl: '.steps__arrow--next',
@@ -36,11 +32,56 @@ const swiper = new Swiper('.swiper-container', {
 const pics = document.querySelectorAll('.steps__marker')
 const svg = document.querySelector('#svg')
 const icons = document.querySelectorAll('.steps__icon')
+let rotateCounter = 0
 
-swiper.on("slideChange", function() {
+swiper.on("slideNextTransitionStart", function() {
+    console.log(swiper.activeIndex)
+
     pics.forEach(el => el.classList.remove('steps__marker--active'))
-    pics[swiper.activeIndex].classList.add('steps__marker--active')
+
     icons.forEach(el => el.classList.remove('steps__icon--active'))
-    icons[swiper.activeIndex].classList.add('steps__icon--active')
-    svg.setAttribute("transform", `rotate(${swiper.activeIndex*60+60})`)
+    if (swiper.activeIndex === 7) {
+        icons[0].classList.add('steps__icon--active')
+        pics[0].classList.add('steps__marker--active')
+    } else if (swiper.activeIndex === 0) {
+        icons[5].classList.add('steps__icon--active')
+        pics[5].classList.add('steps__marker--active')
+
+    } else {
+
+        icons[swiper.activeIndex - 1].classList.add('steps__icon--active')
+        pics[swiper.activeIndex - 1].classList.add('steps__marker--active')
+    }
+
+    if (swiper.previousIndex !== 7) {
+        rotateCounter++
+    }
+
+    svg.setAttribute("transform", `rotate(${rotateCounter*60 + 60})`)
+})
+
+swiper.on("slidePrevTransitionStart", function() {
+    console.log(swiper.activeIndex)
+
+    pics.forEach(el => el.classList.remove('steps__marker--active'))
+
+    icons.forEach(el => el.classList.remove('steps__icon--active'))
+    if (swiper.activeIndex === 7) {
+        icons[0].classList.add('steps__icon--active')
+        pics[0].classList.add('steps__marker--active')
+    } else if (swiper.activeIndex === 0) {
+        icons[5].classList.add('steps__icon--active')
+        pics[5].classList.add('steps__marker--active')
+
+    } else {
+
+        icons[swiper.activeIndex - 1].classList.add('steps__icon--active')
+        pics[swiper.activeIndex - 1].classList.add('steps__marker--active')
+    }
+
+    if (swiper.previousIndex !== 7) {
+        rotateCounter--
+    }
+
+    svg.setAttribute("transform", `rotate(${rotateCounter*60 + 60})`)
 })

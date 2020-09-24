@@ -1,6 +1,4 @@
-import './modules/stickyHeader'
-import './modules/hamburger'
-import './modules/map'
+import './common'
 
 const headers = document.querySelectorAll('.tabs__header')
 const contents = document.querySelectorAll('.tabs__content')

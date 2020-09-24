@@ -130,6 +130,9 @@
 
 @media screen and (max-width: 480px) {
     .examples {
+        &__options {
+            width: 240px;
+        }
         &__pic {
             width: 100%;
             &--sm {

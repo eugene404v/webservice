@@ -7,15 +7,15 @@
         margin-right: auto;
         width: 826px;
         display: grid;
-        grid-template-columns: 326px 40px 320px;
+        grid-template-columns: 310px 40px 320px;
         grid-column-gap: 70px;
         grid-template-rows: 83px auto;
         grid-template-areas: "circle arrows title" "circle  arrows slider";
     }
     &__container {
         position: relative;
-        width: 326px;
-        height: 326px;
+        width: 310px;
+        height: 310px;
         grid-area: circle;
     }
     &__marker {
@@ -38,25 +38,25 @@
         }
         &:nth-child(1) {
             top: -10px;
-            left: 158px;
+            left: 148px;
         }
         &:nth-child(2) {
             top: 65px;
-            left: 285px;
+            left: 274px;
         }
         &:nth-child(3) {
             top: auto;
-            bottom: 77px;
-            left: 290px;
+            bottom: 72px;
+            left: 275px;
         }
         &:nth-child(4) {
             top: auto;
             bottom: -10px;
-            left: 158px;
+            left: 148px;
         }
         &:nth-child(5) {
             top: auto;
-            bottom: 80px;
+            bottom: 75px;
             left: 10px;
         }
         &:nth-child(6) {
@@ -182,7 +182,7 @@
     .steps {
         &__wrapper {
             width: 686px;
-            grid-template-columns: 326px 320px;
+            grid-template-columns: 310px 320px;
             grid-column-gap: 40px;
             grid-template-rows: 83px 210px auto;
             grid-template-areas: "title title" "circle slider" "circle arrows";

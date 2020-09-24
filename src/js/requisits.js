@@ -1,6 +1,4 @@
-import './modules/stickyHeader'
-import './modules/hamburger'
-import './modules/map'
+import './common'
 
 const reqBtn = document.querySelector('.requisits__file')
 const reqItems = document.querySelectorAll('.requisits__item')

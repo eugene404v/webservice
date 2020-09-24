@@ -28,6 +28,7 @@
         @include wrapper;
     }
     &__more {
+        order: 1;
         &:hover {
             & .header__logo:after {
                 transition: .5s;
@@ -144,6 +145,9 @@
             margin-left: 20px;
             text-decoration-line: underline;
             display: none;
+            &::before {
+                display: none !important;
+            }
         }
         &--phone {
             margin-left: 20px;
@@ -204,11 +208,15 @@
         }
     }
     &__container {
+        order: 2;
         display: flex;
         justify-content: space-between;
         height: 50px;
         display: flex;
         align-items: center;
+        & .header__contact {
+            display: none;
+        }
     }
     &__item {
         position: relative;
@@ -281,12 +289,15 @@
         display: none;
     }
     &__right {
+        order: 4;
         position: relative;
         display: flex;
         align-items: center;
     }
     &__contacts--mobile {
-        display: none;
+        order: 3;
+        display: flex;
+        margin-right: 50px;
     }
 }
 
@@ -449,6 +460,9 @@
                 transition: 1s;
                 height: calc(100vh - 60px);
             }
+            & .header__contact {
+                display: block;
+            }
         }
         &__nav {
             margin-top: 80px;
@@ -530,6 +544,10 @@
                     display: block;
                 }
             }
+        }
+        &__map {
+            left: -100px;
+            bottom: -188px;
         }
     }
 }

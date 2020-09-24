@@ -1,9 +1,7 @@
-import './modules/stickyHeader'
-import './modules/hamburger'
-
+import './common'
 import './modules/scroll.js'
 
-import './modules/map'
+
 
 import Swiper, { Navigation, EffectCoverflow } from 'swiper';
 

@@ -13159,6 +13159,27 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/common.js":
+/*!**************************!*\
+  !*** ./src/js/common.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
+/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/***/ }),
+
 /***/ "./src/js/corporate.js":
 /*!*****************************!*\
   !*** ./src/js/corporate.js ***!
@@ -13172,25 +13193,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./src/js/common.js");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 
 
 
-
-
-swiper__WEBPACK_IMPORTED_MODULE_5__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_5__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_5__["Pagination"]]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.swiper-container', {
+swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"]]);
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.swiper-container', {
+  loop: true,
   spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination'
-  },
   navigation: {
     nextEl: '.steps__arrow--next',
     prevEl: '.steps__arrow--prev'
@@ -13212,16 +13224,58 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.swiper-contain
 var pics = document.querySelectorAll('.steps__marker');
 var svg = document.querySelector('#svg');
 var icons = document.querySelectorAll('.steps__icon');
-swiper.on("slideChange", function () {
+var rotateCounter = 0;
+swiper.on("slideNextTransitionStart", function () {
+  console.log(swiper.activeIndex);
   pics.forEach(function (el) {
     return el.classList.remove('steps__marker--active');
   });
-  pics[swiper.activeIndex].classList.add('steps__marker--active');
   icons.forEach(function (el) {
     return el.classList.remove('steps__icon--active');
   });
-  icons[swiper.activeIndex].classList.add('steps__icon--active');
-  svg.setAttribute("transform", "rotate(".concat(swiper.activeIndex * 60 + 60, ")"));
+
+  if (swiper.activeIndex === 7) {
+    icons[0].classList.add('steps__icon--active');
+    pics[0].classList.add('steps__marker--active');
+  } else if (swiper.activeIndex === 0) {
+    icons[5].classList.add('steps__icon--active');
+    pics[5].classList.add('steps__marker--active');
+  } else {
+    icons[swiper.activeIndex - 1].classList.add('steps__icon--active');
+    pics[swiper.activeIndex - 1].classList.add('steps__marker--active');
+  }
+
+  if (swiper.previousIndex !== 7) {
+    rotateCounter++;
+  }
+
+  svg.setAttribute("transform", "rotate(".concat(rotateCounter * 60 + 60, ")"));
+});
+swiper.on("slidePrevTransitionStart", function () {
+  console.log(swiper.activeIndex);
+  pics.forEach(function (el) {
+    return el.classList.remove('steps__marker--active');
+  });
+  icons.forEach(function (el) {
+    return el.classList.remove('steps__icon--active');
+  });
+
+  if (swiper.activeIndex === 7) {
+    icons[0].classList.add('steps__icon--active');
+    pics[0].classList.add('steps__marker--active');
+  } else if (swiper.activeIndex === 0) {
+    icons[5].classList.add('steps__icon--active');
+    pics[5].classList.add('steps__marker--active');
+  } else {
+    icons[swiper.activeIndex - 1].classList.add('steps__icon--active');
+    pics[swiper.activeIndex - 1].classList.add('steps__marker--active');
+  }
+
+  if (swiper.previousIndex !== 7) {
+    rotateCounter--;
+  }
+
+  svg.setAttribute("transform", "rotate(".concat(rotateCounter * 60 + 60, ")"));
 });
 
 /***/ }),

@@ -9,7 +9,8 @@
 @import "./modules/btn";
 @import "./modules/header";
 @import "./modules/footer";
-//^common styles
+//^common style
+@import "./modules/corporate/promo";
 @import "./modules/corporate/steps";
 main {
     overflow: hidden;

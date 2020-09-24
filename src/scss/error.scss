@@ -27,6 +27,7 @@
     }
     &__text {
         margin-bottom: 30px;
+        text-align: center;
     }
     &__circle {
         background: url('./../img/error1.svg') -27px 228px, linear-gradient(141.69deg, #09203F 1.7%, rgba(83, 120, 149, 0.44) 245.05%), #FFFFFF;
@@ -60,4 +61,14 @@
     position: fixed;
     bottom: 0;
     display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .error {
+        &__numbers {
+            margin-top: 100px;
+            margin-bottom: 70px;
+            transform: scale(0.5);
+        }
+    }
 }

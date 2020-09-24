@@ -70,3 +70,78 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .promo {
+        &__wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__info {
+            max-width: 400px;
+        }
+        &__title {
+            font-size: 34px;
+        }
+        &__content {
+            padding-top: 50px;
+        }
+        &__img {
+            max-width: 540px;
+        }
+        &__pic {
+            &--sm {
+                left: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        &__wrapper {
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__info {
+            max-width: 562px;
+        }
+        &__pic {
+            width: 100%;
+            &--sm {
+                width: 131px;
+                bottom: 0;
+                left: auto;
+                right: 60px;
+            }
+        }
+        &__img {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+        }
+        &__btn {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promo {
+        &__title {
+            font-size: 24px;
+        }
+        &__options {
+            width: 292px;
+        }
+        &__pic {
+            &--sm {
+                top: auto;
+                width: 58px;
+                height: 125px;
+            }
+        }
+    }
+}

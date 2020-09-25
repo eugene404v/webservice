@@ -6,3 +6,4 @@
 * [404](https://eugene404v.github.io/webservice/error.html)
 * [Услуги](https://eugene404v.github.io/webservice/services.html)
 * [Корпоративный сайт](https://eugene404v.github.io/webservice/corporate.html)
+* [Администрирование](https://eugene404v.github.io/webservice/admin.html)

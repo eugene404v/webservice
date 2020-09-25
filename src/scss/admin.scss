@@ -1,0 +1,13 @@
+@import "./modules/bootstrap-reboot.scss";
+@import "./../../node_modules/swiper/swiper.scss";
+@import "./../../node_modules/swiper/components/effect-coverflow/effect-coverflow.scss";
+@import "./../../node_modules/swiper/components/navigation/navigation.scss";
+@import "./modules/fonts";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/common";
+@import "./modules/btn";
+@import "./modules/header";
+@import "./modules/footer";
+//^common style
+@import "./modules/admin/admin.scss"

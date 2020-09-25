@@ -1,0 +1,32 @@
+.admin {
+    &__wrapper {
+        @include wrapper;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__section {
+        position: relative;
+        width: 50%;
+        padding: 30px;
+        background: linear-gradient(156.46deg, rgba(245, 247, 250, 0.76) 15.84%, rgba(184, 198, 219, 0.0554167) 93.12%), #F2F2F2;
+        &--dark {
+            background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+            color: #fff;
+        }
+    }
+    &__btn {
+        height: 52px;
+        width: 218px;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+    &__subtitle {
+        margin-bottom: 40px;
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+}

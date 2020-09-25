@@ -2,6 +2,12 @@
     &__wrapper {
         @include wrapper;
     }
+    &__title {
+        font-size: 40px;
+        color: $hover;
+        max-width: 600px;
+        margin-bottom: 60px;
+    }
     &__flex {
         display: flex;
         justify-content: space-between;
@@ -11,9 +17,43 @@
         width: 50%;
         padding: 30px;
         background: linear-gradient(156.46deg, rgba(245, 247, 250, 0.76) 15.84%, rgba(184, 198, 219, 0.0554167) 93.12%), #F2F2F2;
+        &:before {
+            z-index: 0;
+            display: block;
+            content: '';
+            position: absolute;
+            width: 167px;
+            height: 167px;
+            border-radius: 50%;
+            background: url('./../img/admin.svg') center no-repeat, linear-gradient(132.76deg, #F4F6F8 16.72%, #E6EAEE 56.72%, #FFA463 313.99%), #FFFFFF;
+            box-shadow: 0px 100px 200px rgba(255, 255, 255, 0.24), 0px 47.8284px 98.0759px rgba(255, 255, 255, 0.224473), 0px 17.8919px 50.0314px rgba(255, 255, 255, 0.205812), 0px 3.99493px 23.426px rgba(255, 255, 255, 0.177685), 0px -0.229651px 8.18008px rgba(255, 255, 255, 0.0807773);
+            top: 113px;
+            right: 65px;
+        }
+        &:after {
+            z-index: 0;
+            display: block;
+            content: '';
+            position: absolute;
+            top: 64px;
+            right: 31px;
+            width: 97px;
+            height: 97px;
+            border-radius: 50%;
+            background: linear-gradient(132.76deg, #F4F6F8 16.72%, #E6EAEE 56.72%, #FFA463 313.99%), #FFFFFF;
+            box-shadow: 0px 100px 200px rgba(255, 255, 255, 0.24), 0px 47.8284px 98.0759px rgba(255, 255, 255, 0.224473), 0px 17.8919px 50.0314px rgba(255, 255, 255, 0.205812), 0px 3.99493px 23.426px rgba(255, 255, 255, 0.177685), 0px -0.229651px 8.18008px rgba(255, 255, 255, 0.0807773);
+        }
         &--dark {
             background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
             color: #fff;
+            &:before {
+                background: url('./../img/admin-dark.svg') center no-repeat, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+                box-shadow: 0px 100px 200px rgba(255, 255, 255, 0.24), 0px 47.8284px 98.0759px rgba(255, 255, 255, 0.224473), 0px 17.8919px 50.0314px rgba(255, 255, 255, 0.205812), 0px 3.99493px 23.426px rgba(255, 255, 255, 0.177685), 0px -0.229651px 8.18008px rgba(255, 255, 255, 0.0807773);
+            }
+            &:after {
+                background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+                box-shadow: 0px 100px 200px rgba(255, 255, 255, 0.24), 0px 47.8284px 98.0759px rgba(255, 255, 255, 0.224473), 0px 17.8919px 50.0314px rgba(255, 255, 255, 0.205812), 0px 3.99493px 23.426px rgba(255, 255, 255, 0.177685), 0px -0.229651px 8.18008px rgba(255, 255, 255, 0.0807773);
+            }
         }
     }
     &__btn {
@@ -22,11 +62,25 @@
         position: absolute;
         bottom: 30px;
         right: 30px;
+        &--dark {
+            border: 1px solid #fff;
+            color: $dark-text;
+            &:after {
+                background-color: $dark-text;
+            }
+        }
     }
     &__subtitle {
         margin-bottom: 40px;
+        color: $hover;
+        &--dark {
+            color: #fff;
+        }
     }
     &__item {
         margin-bottom: 20px;
+        font-weight: bold;
+        z-index: 1;
+        position: relative;
     }
 }

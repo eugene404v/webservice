@@ -17,7 +17,7 @@
         margin-bottom: 45px;
     }
     &__content {
-        max-width: 540px;
+        max-width: 640px;
         font-weight: normal;
         font-size: 24px;
         line-height: 141.8%;
@@ -41,6 +41,7 @@
         width: 470px;
         height: 380px;
         padding: 31px 27px;
+        margin-left: auto;
     }
     &__item {
         display: flex;

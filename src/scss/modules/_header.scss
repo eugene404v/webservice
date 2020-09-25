@@ -1,5 +1,6 @@
 .header {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     position: sticky;
     z-index: 10;
     top: 0;
@@ -45,7 +46,6 @@
     &__logo {
         position: relative;
         transition: .5s;
-        padding-bottom: 10px;
         &:after {
             transition: .5s;
             content: '';
@@ -128,7 +128,7 @@
     }
     &__map {
         position: absolute;
-        bottom: -175px;
+        bottom: -192px;
         display: none;
         &--opened {
             display: block;
@@ -173,8 +173,8 @@
                 transition: .5s;
             }*/
             &:before {
-                position: static !important;
-                top: -15px !important;
+                position: absolute;
+                left: 0;
             }
             &:hover,
             &--opened {
@@ -309,7 +309,7 @@
     box-sizing: border-box;
     transition: .5s;
     position: absolute;
-    top: 55px;
+    top: 50px;
     background-color: #fff;
     box-shadow: 10px 9px 19px -4px rgba(0, 0, 0, .19);
     border-radius: 0px 0px 10px 10px;
@@ -399,16 +399,21 @@
         }
         &__container {
             flex-grow: 1;
-            margin-left: 70px;
-            margin-right: 50px;
+            margin-left: 45px;
+            margin-right: 20px;
         }
         &__link {
-            margin-right: 10px;
+            margin-right: 5px;
             font-size: 14px;
         }
         &__contact {
             margin-left: 5px;
             font-size: 14px;
+        }
+        &__contacts {
+            &--mobile {
+                margin-right: 20px;
+            }
         }
     }
 }

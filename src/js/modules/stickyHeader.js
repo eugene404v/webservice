@@ -1,4 +1,4 @@
-const header = document.querySelector('.header')
+/*const header = document.querySelector('.header')
 
 window.onscroll = function() {
     if (document.body.clientWidth > 991) {
@@ -9,4 +9,4 @@ window.onscroll = function() {
         }
     }
 
-};
+};*/

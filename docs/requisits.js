@@ -1743,6 +1743,25 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/common.js":
+/*!**************************!*\
+  !*** ./src/js/common.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_1__);
+//import './modules/stickyHeader'
+
+
+
+/***/ }),
+
 /***/ "./src/js/modules/hamburger.js":
 /*!*************************************!*\
   !*** ./src/js/modules/hamburger.js ***!
@@ -1846,27 +1865,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/modules/stickyHeader.js":
-/*!****************************************!*\
-  !*** ./src/js/modules/stickyHeader.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var header = document.querySelector('.header');
-
-window.onscroll = function () {
-  if (document.body.clientWidth > 991) {
-    if (window.pageYOffset >= 100) {
-      header.classList.add('header--sticky');
-    } else {
-      header.classList.remove('header--sticky');
-    }
-  }
-};
-
-/***/ }),
-
 /***/ "./src/js/requisits.js":
 /*!*****************************!*\
   !*** ./src/js/requisits.js ***!
@@ -1882,30 +1880,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./common */ "./src/js/common.js");
 
 
 
 
-
-
-var reqBtn = document.querySelector('.requisits__file');
-var reqItems = document.querySelectorAll('.requisits__item');
-reqBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  var text = "";
-  reqItems.forEach(function (item) {
-    var type = item.querySelector('.requisits__type').textContent;
-    var content = item.querySelector('.requisits__content').textContent;
-    text = "".concat(text, "\n        ").concat(type, " ").concat(content);
+var reqBtns = document.querySelectorAll('.requisits__file');
+var reqLists = document.querySelectorAll('.requisits__list');
+reqBtns.forEach(function (el, i) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    var text = "";
+    var list = reqLists[i];
+    var reqItems = list.querySelectorAll('.requisits__item');
+    reqItems.forEach(function (item) {
+      var type = item.querySelector('.requisits__type').textContent;
+      var content = item.querySelector('.requisits__content').textContent;
+      text = "".concat(text, "\n        ").concat(type, " ").concat(content);
+    });
+    navigator.clipboard.writeText(text);
+    alert('реквизиты скопированы');
   });
-  navigator.clipboard.writeText(text);
-  alert('реквизиты скопированы');
+});
+var headers = document.querySelectorAll('.requisits__headline');
+headers.forEach(function (el, i) {
+  var title = el.querySelector('.requisits__header');
+  var expandBtn = el.querySelector('.requisits__expand');
+  title.addEventListener('click', function () {
+    expandBtn.classList.toggle('requisits__expand--opened');
+    el.nextElementSibling.classList.toggle('requisits__list--opened');
+  });
+  expandBtn.addEventListener('click', function () {
+    expandBtn.classList.toggle('requisits__expand--opened');
+    el.nextElementSibling.classList.toggle('requisits__list--opened');
+  });
 });
 
 /***/ })

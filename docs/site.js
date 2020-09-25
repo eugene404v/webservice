@@ -14761,6 +14761,25 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/common.js":
+/*!**************************!*\
+  !*** ./src/js/common.js ***!
+  \**************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_1__);
+//import './modules/stickyHeader'
+
+
+
+/***/ }),
+
 /***/ "./src/js/modules/hamburger.js":
 /*!*************************************!*\
   !*** ./src/js/modules/hamburger.js ***!
@@ -14942,27 +14961,6 @@ try {
 
 /***/ }),
 
-/***/ "./src/js/modules/stickyHeader.js":
-/*!****************************************!*\
-  !*** ./src/js/modules/stickyHeader.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var header = document.querySelector('.header');
-
-window.onscroll = function () {
-  if (document.body.clientWidth > 991) {
-    if (window.pageYOffset >= 100) {
-      header.classList.add('header--sticky');
-    } else {
-      header.classList.remove('header--sticky');
-    }
-  }
-};
-
-/***/ }),
-
 /***/ "./src/js/site.js":
 /*!************************!*\
   !*** ./src/js/site.js ***!
@@ -14972,21 +14970,14 @@ window.onscroll = function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_scroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scroll.js */ "./src/js/modules/scroll.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ "./src/js/common.js");
+/* harmony import */ var _modules_scroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scroll.js */ "./src/js/modules/scroll.js");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 
 
-
-
-swiper__WEBPACK_IMPORTED_MODULE_4__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_4__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_4__["EffectCoverflow"]]);
-var mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_4__["default"]('.swiper-container', {
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_2__["EffectCoverflow"]]);
+var mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiper-container', {
   loop: true,
   speed: 1000,
   autoplay: {
@@ -14999,7 +14990,7 @@ var mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_4__["default"]('.swiper-conta
   coverflowEffect: {
     rotate: 0,
     stretch: 80,
-    depth: 200,
+    depth: 100,
     modifier: 1,
     slideShadows: false
   },

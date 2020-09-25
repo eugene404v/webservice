@@ -9,6 +9,10 @@
 @import "./modules/header";
 @import "./modules/footer";
 //^common styles
+body {
+    overflow-y: scroll;
+}
+
 .requisits {
     &__wrapper {
         @include wrapper;
@@ -19,12 +23,17 @@
         line-height: 49px;
         color: $hover;
         margin-right: 45px;
+        cursor: pointer;
     }
     &__headline {
         margin-top: 40px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+        width: 100%;
+        border-bottom: 2px solid $hover;
+        padding-bottom: 5px;
     }
     &__file {
         display: block;
@@ -36,6 +45,8 @@
         background-image: url('./../img/copy-file.svg');
         background-repeat: no-repeat;
         background-position: center;
+        margin-left: auto;
+        margin-right: 20px;
     }
     &__item {
         width: 100%;
@@ -61,6 +72,34 @@
     }
     &__link {
         display: inline;
+    }
+    &__expand {
+        width: 36px;
+        height: 36px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(243, 110, 15, 0.4);
+        background-image: url('./../img/requisits-expand.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+        border-radius: 50%;
+        transition: .3s;
+        &:hover,
+        &--opened {
+            transition: .3s;
+            transform: rotate(180deg);
+        }
+    }
+    &__list {
+        height: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: .9s;
+        &--opened {
+            height: auto;
+            max-height: 1500px;
+            transition: .9s;
+        }
     }
 }
 

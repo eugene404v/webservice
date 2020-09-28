@@ -128,7 +128,7 @@
     }
     &__map {
         position: absolute;
-        bottom: -192px;
+        top: 40px;
         display: none;
         &--opened {
             display: block;
@@ -551,7 +551,6 @@
         }
         &__map {
             left: -100px;
-            bottom: -188px;
         }
     }
 }

@@ -60,20 +60,11 @@
 
 @media screen and (max-width: 991px) {
     .features {
-        &__item {
-            width: 220px;
-        }
-    }
-}
-
-@media screen and (max-width: 610px) {
-    .features {
         &__list {
             flex-direction: column;
             align-items: center;
         }
         &__item {
-            width: 286px;
             margin-bottom: 20px;
         }
     }

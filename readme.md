@@ -8,3 +8,4 @@
 * [Корпоративный сайт](https://eugene404v.github.io/webservice/corporate.html)
 * [Администрирование](https://eugene404v.github.io/webservice/admin.html)
 * [Тестирование](https://eugene404v.github.io/webservice/testing.html)
+* [Тестирование сайта на уязвимости](https://eugene404v.github.io/webservice/pentesting.html)

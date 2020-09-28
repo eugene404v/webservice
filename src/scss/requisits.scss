@@ -1,13 +1,4 @@
-@import "./modules/bootstrap-reboot.scss";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
-@import "./modules/fonts";
-@import "./modules/variables";
-@import "./modules/mixins";
-@import "./modules/common";
-@import "./modules/btn";
-@import "./modules/header";
-@import "./modules/footer";
+@import "./base.scss";
 //^common styles
 body {
     overflow-y: scroll;

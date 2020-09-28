@@ -6,7 +6,5 @@
 * [404](https://eugene404v.github.io/webservice/error.html)
 * [Услуги](https://eugene404v.github.io/webservice/services.html)
 * [Корпоративный сайт](https://eugene404v.github.io/webservice/corporate.html)
-<<<<<<< HEAD
 * [Администрирование](https://eugene404v.github.io/webservice/admin.html)
-=======
->>>>>>> 49b7dc52b4593dcda71e2db5dfa294fc8ed2032b
+* [Тестирование](https://eugene404v.github.io/webservice/testing.html)

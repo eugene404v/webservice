@@ -11,3 +11,4 @@
 * [Тестирование сайта на уязвимости](https://eugene404v.github.io/webservice/pentesting.html)
 * [Развитие существующих веб-приложений](https://eugene404v.github.io/webservice/apps.html)
 * [Внедрение CRM](https://eugene404v.github.io/webservice/crm.html)
+* [Автоматизация бизнес-процессов](https://eugene404v.github.io/webservice/erp.html)

@@ -40,6 +40,7 @@
             font-weight: 500;
             opacity: .5;
             transition: .3s;
+            margin-right: 10px;
             &--active,
             &:hover,
             &:active {
@@ -68,6 +69,25 @@
                 &:hover {
                     color: $hover;
                 }
+            }
+        }
+        &__link {
+            width: fit-content;
+            padding-right: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 22px;
+                height: 15px;
+                background-image: url('./../img/arrow-hover.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
             }
         }
         &__contents {

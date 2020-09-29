@@ -38,3 +38,80 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .promo {
+        background: url('./../img/crm-bg.png') no-repeat 100% 20px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        background: url('./../img/crm-bg.png') no-repeat 144% 100px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+        &__subtitle {
+            max-width: 260px;
+        }
+        &__item {
+            &:nth-child(2) {
+                max-width: 280px;
+            }
+            &:nth-child(3) {
+                max-width: 260px;
+            }
+            &:nth-child(4) {
+                max-width: 305px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .promo {
+        background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+        text-align: center;
+        &__wrapper {
+            background-image: url('./../img/crm-bg.png');
+            background-repeat: no-repeat;
+            background-position: center 80px;
+            background-size: auto 300px;
+        }
+        &__subtitle {
+            margin-top: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            padding-left: 0;
+            padding-bottom: 14px;
+            &:before {
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .promo {
+        &__wrapper {
+            background-position: center 115px;
+        }
+        &__subtitle {
+            margin-top: 320px;
+        }
+    }
+}

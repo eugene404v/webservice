@@ -1,5 +1,35 @@
 .testing {
-    &__content {}
+    &__text {
+        max-width: 624px;
+    }
+    &__content {
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 50px;
+        &:before,
+        &:after {
+            display: block;
+            content: '';
+            border-radius: 8px;
+            box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #fff;
+        }
+        &::before {
+            width: 138px;
+            height: 190px;
+            background-image: url('./../img/crm1.svg');
+            margin-left: auto;
+        }
+        &::after {
+            width: 138px;
+            height: 150px;
+            background-image: url('./../img/app1.svg');
+            margin-left: 60px;
+            margin-right: auto;
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -21,6 +51,33 @@
             width: 610px;
             margin-left: auto;
             margin-right: auto;
+            &::before {
+                width: 131px;
+                height: 182px;
+            }
+            &::after {
+                width: 138px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .testing {
+        padding-bottom: 0;
+        &__content {
+            padding-top: 30px;
+            height: 210px;
+            width: 100%;
+            &::before {
+                width: 92px;
+                height: 129px;
+            }
+            &::after {
+                width: 92px;
+                height: 105px;
+            }
         }
     }
 }

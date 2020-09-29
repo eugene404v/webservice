@@ -28,35 +28,6 @@
         align-items: center;
         @include wrapper;
     }
-    &__more {
-        order: 1;
-        &:hover {
-            & .header__logo:after {
-                transition: .5s;
-                transform: rotate(180deg);
-            }
-            & .more {
-                transition: .5s;
-                opacity: 1;
-                height: auto;
-                padding: 10px 40px 20px 7px;
-            }
-        }
-    }
-    &__logo {
-        position: relative;
-        transition: .5s;
-        &:after {
-            transition: .5s;
-            content: '';
-            width: 15px;
-            height: 9px;
-            background-image: url('./../img/header-expand.svg');
-            position: absolute;
-            top: 10px;
-            margin-left: 12px;
-        }
-    }
     &__btn {
         margin-top: 2px;
         &:before,
@@ -299,6 +270,30 @@
         display: flex;
         margin-right: 50px;
     }
+    &__more {
+        position: relative;
+        order: 1;
+    }
+    &__logo {
+        position: relative;
+        transition: .5s;
+    }
+    &__drop {
+        cursor: pointer;
+        transition: .5s;
+        width: 30px;
+        height: 30px;
+        background-image: url('./../img/header-expand.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 5px;
+        left: 150px;
+        &--opened {
+            transition: .5s;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .more {
@@ -315,9 +310,11 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 0;
     padding-bottom: 0;
-    &:hover {
+    &--opened {
+        transition: .5s;
         opacity: 1;
         height: auto;
+        padding: 10px 40px 20px 7px;
     }
     &__title {
         margin-bottom: 20px;

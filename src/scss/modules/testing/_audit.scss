@@ -10,6 +10,8 @@
         grid-area: title;
         margin-top: 20px;
         width: 470px;
+        @include fsz(24px, 24px, 18px);
+        margin-bottom: 10px;
         &--colored {
             color: $hover;
         }

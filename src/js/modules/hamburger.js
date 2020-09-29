@@ -15,6 +15,16 @@ menuTrigger.addEventListener('click', () => {
     }
 })
 
+//logo dropdown 
+
+const logoTrigger = document.querySelector('.header__drop')
+const logoMenu = document.querySelector('.more')
+
+logoTrigger.addEventListener('click', () => {
+    logoTrigger.classList.toggle('header__drop--opened')
+    logoMenu.classList.toggle('more--opened')
+})
+
 //open map
 
 const mapBtn = document.querySelector('.header__address p')

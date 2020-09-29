@@ -3776,13 +3776,11 @@ var Glide$1 = function (_Core) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_1__);
+//import './modules/stickyHeader'
 
 
 
@@ -3801,53 +3799,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map2', {
-      center: [59.914540, 30.271627],
-      zoom: 16,
-      controls: []
-    }, {
-      searchControlProvider: 'yandex#search'
-    }); // Создаём макет содержимого.
-
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'), myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'Собственный значок метки',
-      balloonContent: 'Это красивая метка'
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#image',
-      // Своё изображение иконки метки.
-      iconImageHref: './img/header-map.svg',
-      // Размеры метки.
-      iconImageSize: [30, 42],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-5, -38]
-    }), myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-      hintContent: 'Собственный значок метки с контентом',
-      balloonContent: 'А эта — новогодняя',
-      iconContent: '12'
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
-      iconImageHref: './img/header-map.svg',
-      // Размеры метки.
-      iconImageSize: [48, 48],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-24, -24],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
-      iconContentOffset: [15, 15],
-      // Макет содержимого.
-      iconContentLayout: MyIconContentLayout
-    });
-    myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
-  });
-});
 
 /***/ }),
 
@@ -3871,6 +3822,13 @@ menuTrigger.addEventListener('click', function () {
     menuTrigger.classList.toggle('header__btn--opened');
     document.body.classList.toggle('overflow_hidden');
   }
+}); //logo dropdown 
+
+var logoTrigger = document.querySelector('.header__drop');
+var logoMenu = document.querySelector('.more');
+logoTrigger.addEventListener('click', function () {
+  logoTrigger.classList.toggle('header__drop--opened');
+  logoMenu.classList.toggle('more--opened');
 }); //open map
 
 var mapBtn = document.querySelector('.header__address p');
@@ -4077,28 +4035,6 @@ new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', 
     }
   }
 }).mount();
-
-/***/ }),
-
-/***/ "./src/js/modules/stickyHeader.js":
-/*!****************************************!*\
-  !*** ./src/js/modules/stickyHeader.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/*const header = document.querySelector('.header')
-
-window.onscroll = function() {
-    if (document.body.clientWidth > 991) {
-        if (window.pageYOffset >= 100) {
-            header.classList.add('header--sticky');
-        } else {
-            header.classList.remove('header--sticky');
-        }
-    }
-
-};*/
 
 /***/ })
 

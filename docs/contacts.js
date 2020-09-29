@@ -186,6 +186,13 @@ menuTrigger.addEventListener('click', function () {
     menuTrigger.classList.toggle('header__btn--opened');
     document.body.classList.toggle('overflow_hidden');
   }
+}); //logo dropdown 
+
+var logoTrigger = document.querySelector('.header__drop');
+var logoMenu = document.querySelector('.more');
+logoTrigger.addEventListener('click', function () {
+  logoTrigger.classList.toggle('header__drop--opened');
+  logoMenu.classList.toggle('more--opened');
 }); //open map
 
 var mapBtn = document.querySelector('.header__address p');

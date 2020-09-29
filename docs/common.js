@@ -95,13 +95,11 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/stickyHeader */ "./src/js/modules/stickyHeader.js");
-/* harmony import */ var _modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_stickyHeader__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
-/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
+/* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_1__);
+//import './modules/stickyHeader'
 
 
 
@@ -127,6 +125,13 @@ menuTrigger.addEventListener('click', function () {
     menuTrigger.classList.toggle('header__btn--opened');
     document.body.classList.toggle('overflow_hidden');
   }
+}); //logo dropdown 
+
+var logoTrigger = document.querySelector('.header__drop');
+var logoMenu = document.querySelector('.more');
+logoTrigger.addEventListener('click', function () {
+  logoTrigger.classList.toggle('header__drop--opened');
+  logoMenu.classList.toggle('more--opened');
 }); //open map
 
 var mapBtn = document.querySelector('.header__address p');
@@ -149,6 +154,8 @@ main.addEventListener('click', function () {
   menuTrigger.classList.remove('header__btn--opened');
   document.body.classList.remove('overflow_hidden');
   rightMenu.classList.remove('header__submenu--main--opened');
+  logoTrigger.classList.remove('header__drop--opened');
+  logoMenu.classList.remove('more--opened');
 });
 
 /***/ }),
@@ -207,27 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
     myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
   });
 });
-
-/***/ }),
-
-/***/ "./src/js/modules/stickyHeader.js":
-/*!****************************************!*\
-  !*** ./src/js/modules/stickyHeader.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var header = document.querySelector('.header');
-
-window.onscroll = function () {
-  if (document.body.clientWidth > 991) {
-    if (window.pageYOffset >= 100) {
-      header.classList.add('header--sticky');
-    } else {
-      header.classList.remove('header--sticky');
-    }
-  }
-};
 
 /***/ })
 

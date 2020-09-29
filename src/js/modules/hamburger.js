@@ -50,4 +50,6 @@ main.addEventListener('click', () => {
     menuTrigger.classList.remove('header__btn--opened')
     document.body.classList.remove('overflow_hidden')
     rightMenu.classList.remove('header__submenu--main--opened')
+    logoTrigger.classList.remove('header__drop--opened')
+    logoMenu.classList.remove('more--opened')
 })

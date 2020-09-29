@@ -1,0 +1,26 @@
+.testing {
+    &__content {}
+}
+
+@media screen and (max-width: 991px) {
+    .testing {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "headline" "content" "info";
+        }
+        &__text {
+            width: 100%;
+            max-width: none;
+            text-align: center;
+        }
+        &__content {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 315px;
+            width: 610px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

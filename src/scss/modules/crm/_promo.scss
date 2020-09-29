@@ -1,0 +1,40 @@
+.promo {
+    background: url('./../img/crm-bg.png') no-repeat 75% 20px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    color: #fff;
+    padding: 30px 0;
+    &__wrapper {
+        @include wrapper;
+    }
+    &__title {
+        max-width: 540px;
+        @include fsz(24px,
+        24px,
+        18px);
+        &--colored {
+            color: $hover;
+        }
+    }
+    &__subtitle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include fsz(18px,
+        18px,
+        16px);
+    }
+    &__item {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 45px;
+        &:before {
+            display: block;
+            position: absolute;
+            content: '';
+            height: 4px;
+            width: 28px;
+            background-color: $hover;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+}

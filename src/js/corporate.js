@@ -1,5 +1,3 @@
-import './common'
-
 import Swiper, { Navigation } from 'swiper'
 
 Swiper.use([Navigation])

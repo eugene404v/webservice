@@ -1,5 +1,3 @@
-import './common'
-
 const headers = document.querySelectorAll('.tabs__header')
 const contents = document.querySelectorAll('.tabs__content')
 

@@ -1,5 +1,3 @@
-import './common'
-
 document.addEventListener('DOMContentLoaded', () => {
     ymaps.ready(function() {
 

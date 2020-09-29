@@ -1,5 +1,3 @@
-import './common'
-
 const reqBtns = document.querySelectorAll('.requisits__file')
 const reqLists = document.querySelectorAll('.requisits__list')
 

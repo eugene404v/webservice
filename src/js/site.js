@@ -1,4 +1,3 @@
-import './common'
 import './modules/scroll.js'
 
 

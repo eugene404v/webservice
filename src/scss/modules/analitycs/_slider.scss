@@ -72,13 +72,30 @@
     }
     &__list {
         width: 760px;
-        height: 473px;
+        height: 560px;
         margin-top: 50px;
     }
     &__slide {
         display: none;
+        background-repeat: no-repeat;
+        background-position: right center;
         &--active {
             display: block;
+        }
+        &--tech {
+            background-image: url('./../img/anal-tech.svg');
+        }
+        &--seo {
+            background-image: url('./../img/anal-seo.svg');
+            & .slider__item {
+                margin-bottom: 10px;
+            }
+        }
+        &--market {
+            background-image: url('./../img/anal-market.svg');
+        }
+        &--ux {
+            background-image: url('./../img/anal-ux.svg');
         }
     }
     &__name {
@@ -92,6 +109,17 @@
         font-weight: 600;
         max-width: 400px;
         margin-bottom: 20px;
+    }
+    &__item {
+        &--320 {
+            width: 320px;
+        }
+        &--370 {
+            width: 370px;
+        }
+        &--420 {
+            width: 420px;
+        }
     }
     &__btn {
         margin-top: 20px;

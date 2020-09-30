@@ -1,0 +1,86 @@
+.promo {
+    background: url('./../img/erp-bg1.png') no-repeat 75% 40px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    &__item {
+        max-width: 445px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .promo {
+        background: url('./../img/erp-bg1.png') no-repeat 100% 20px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .promo {
+        background: url('./../img/erp-bg1.png') no-repeat 144% 100px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+        &__title {
+            max-width: 460px;
+        }
+        &__item {
+            &:nth-child(1) {
+                max-width: 285px;
+            }
+            &:nth-child(2) {
+                max-width: 280px;
+            }
+            &:nth-child(3) {
+                max-width: 251px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .promo {
+        background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+        text-align: center;
+        &__wrapper {
+            background-image: url('./../img/erp-bg1.png');
+            background-repeat: no-repeat;
+            background-position: -60% 80px;
+            background-size: auto 300px;
+            margin-right: 0;
+            margin-left: 0;
+            width: 100%;
+            max-width: none;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        &__subtitle {
+            margin-top: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            padding-left: 0;
+            padding-bottom: 14px;
+            &:before {
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .promo {
+        &__wrapper {
+            background-position: 15% 80px;
+        }
+    }
+}

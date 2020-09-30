@@ -1,0 +1,36 @@
+.discount {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    &__wrapper {
+        @include wrapper;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '%';
+            font-size: 150px;
+            font-weight: 700;
+            z-index: 1;
+            opacity: 0.1;
+            bottom: -85px;
+            right: 90px;
+        }
+    }
+    &__lg {
+        max-width: 712px;
+        @include fsz(24px, 24px, 18px);
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+    }
+    &__sm {
+        max-width: 460px;
+        @include fsz(18px, 18px, 14px);
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+    }
+}

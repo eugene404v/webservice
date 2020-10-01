@@ -1,0 +1,20 @@
+.spa {
+    background: linear-gradient(136.39deg, rgba(245, 247, 250, 0.76) -6.15%, rgba(184, 198, 219, 0.0554167) 85.8%), #F2F2F2;
+    &__wrapper {
+        @include wrapper;
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        grid-column-gap: 50px;
+        grid-template-rows: auto auto;
+        grid-template-areas: "title img" "info img";
+    }
+    &__title {
+        grid-area: title;
+    }
+    &__img {
+        grid-area: img;
+    }
+    &__info {
+        grid-area: info;
+    }
+}

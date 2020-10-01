@@ -15,3 +15,4 @@
 * [Аналитика](https://eugene404v.github.io/webservice/analitycs.html)
 * [Внедрение систем учёта](https://eugene404v.github.io/webservice/ones.html)
 * [Продукты](https://eugene404v.github.io/webservice/products.html)
+* [Представление наших SPA](https://eugene404v.github.io/webservice/spa.html)

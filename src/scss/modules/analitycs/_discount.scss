@@ -14,7 +14,7 @@
             font-size: 150px;
             font-weight: 700;
             z-index: 1;
-            opacity: 0.1;
+            opacity: 0.04;
             bottom: -85px;
             right: 90px;
         }
@@ -32,5 +32,24 @@
         font-weight: 500;
         position: relative;
         z-index: 2;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .discount {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__lg {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:610px) {
+    .discount {
+        &__wrapper {
+            align-items: center;
+        }
     }
 }

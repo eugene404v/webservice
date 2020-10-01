@@ -1,0 +1,56 @@
+.testing {
+    &__integration {
+        @include fsz(18px, 18px, 16px);
+        margin-bottom: 10px;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            display: block;
+            content: '';
+            width: 344px;
+            height: 174px;
+            background-image: url('./../img/ones.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .testing {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas: "headline" "content" "info";
+        }
+        &__title {
+            position: static;
+        }
+        &__headline {
+            padding-top: 0;
+        }
+        &__content {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            height: 314px;
+        }
+        &__text {
+            width: 690px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: none;
+            text-align: center;
+        }
+        &__integration {
+            text-align: center;
+        }
+        &__btn {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+    }
+}

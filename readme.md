@@ -13,3 +13,4 @@
 * [Внедрение CRM](https://eugene404v.github.io/webservice/crm.html)
 * [Автоматизация бизнес-процессов](https://eugene404v.github.io/webservice/erp.html)
 * [Аналитика](https://eugene404v.github.io/webservice/analitycs.html)
+* [Внедрение систем учёта](https://eugene404v.github.io/webservice/ones.html)

@@ -159,9 +159,6 @@
 
 @media screen and (max-width:610px) {
     .slider {
-        &__wrapper {
-            @include wrapper;
-        }
         &__include,
         &__title {
             display: none;
@@ -171,13 +168,14 @@
         }
         &__name {
             text-align: center;
-            margin-bottom: 360px;
+            margin-bottom: 335px;
         }
         &__subtitle {
             text-align: center;
         }
         &__item {
             text-align: center;
+            width: 100% !important;
         }
         &__features {
             display: flex;
@@ -189,7 +187,8 @@
             margin-right: auto;
         }
         &__slide {
-            background-position: center 30px;
+            background-position: center 40px;
+            background-size: 90%;
         }
     }
 }

@@ -1,0 +1,215 @@
+$local-trans: .5s;
+.products {
+    &__wrapper {
+        @include wrapper;
+    }
+    &__header {
+        font-weight: 700;
+        color: $hover;
+        @include fsz(40px, 40px, 40px);
+        margin-top: 30px;
+        margin-bottom: 45px;
+    }
+    &__svg {
+        width: 30px;
+        height: 20px;
+        fill: #979696;
+        transition: $local-trans;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+    &__title,
+    &__subtitle,
+    &__more,
+    &__text {
+        color: #979696;
+        transition: $local-trans;
+    }
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 45px;
+        font-size: 14px;
+        color: transparent;
+        font-weight: 600;
+    }
+    &__pic {
+        overflow: hidden;
+        width: 271px;
+        height: 153px;
+        border-radius: 5px;
+        position: relative;
+        transition: $local-trans;
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(200, 200, 200, 0.5);
+            transition: $local-trans;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__item {
+        width: 312px;
+        height: 435px;
+    }
+    &__container {
+        border: 1.5px solid #DDDDDD;
+        border-radius: 5px;
+        width: 312px;
+        height: 435px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: $local-trans;
+        &:hover,
+        &:active {
+            transition: $local-trans;
+            background: linear-gradient(156.46deg, rgba(245, 247, 250, 0.76) 15.84%, rgba(184, 198, 219, 0.0554167) 93.12%), #F2F2F2;
+            box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
+            border: none;
+            & .products__subtitle {
+                color: $dark-text;
+                transition: $local-trans;
+            }
+            & .products__title {
+                color: $hover;
+                transition: $local-trans;
+            }
+            & .products__text {
+                color: #828282;
+                height: 65px;
+                transition: $local-trans;
+            }
+            & .products__pic {
+                height: 175px;
+                transition: $local-trans;
+                box-shadow: 4px 7px 24px 1px rgba(0, 0, 0, 0.13);
+                &:before {
+                    opacity: 0;
+                    transition: $local-trans;
+                }
+            }
+            & .products__more {
+                color: $dark-text;
+                transition: $local-trans;
+            }
+            & .products__svg {
+                fill: $dark-text;
+                transform: rotate(-45deg);
+                transition: $local-trans;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .products {
+        &__header {
+            text-align: center;
+        }
+        &__list {
+            max-width: 674px;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .products {
+        &__header {
+            text-align: center;
+        }
+        &__list {
+            max-width: 674px;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .products {
+        &__header {
+            text-align: left;
+        }
+        &__container {
+            transition: $local-trans;
+            background: linear-gradient(156.46deg, rgba(245, 247, 250, 0.76) 15.84%, rgba(184, 198, 219, 0.0554167) 93.12%), #F2F2F2;
+            box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
+            border: none;
+            & .products__subtitle {
+                color: $dark-text;
+                transition: $local-trans;
+            }
+            & .products__title {
+                color: $hover;
+                transition: $local-trans;
+            }
+            & .products__text {
+                color: #828282;
+                height: 65px;
+                transition: $local-trans;
+            }
+            & .products__pic {
+                height: 175px;
+                transition: $local-trans;
+                box-shadow: 4px 7px 24px 1px rgba(0, 0, 0, 0.13);
+                &:before {
+                    opacity: 0;
+                    transition: $local-trans;
+                }
+            }
+            & .products__more {
+                color: $dark-text;
+                transition: $local-trans;
+            }
+            & .products__svg {
+                fill: $dark-text;
+                transition: $local-trans;
+            }
+            &:active {
+                & .products__svg {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .products {
+        &__header {
+            text-align: center;
+        }
+        &__list {
+            justify-content: space-around;
+        }
+    }
+}

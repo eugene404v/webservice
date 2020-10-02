@@ -1,11 +1,18 @@
 @import "./base.scss";
 @import "./modules/orion/orion";
 @import "./modules/orion/order";
+@import "./modules/ezp/shield";
 .ezp {
     &__info {
         margin-bottom: 10px;
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+.order {
+    &__wrapper {
+        grid-template-rows: 50px auto;
     }
 }

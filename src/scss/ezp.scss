@@ -1,0 +1,11 @@
+@import "./base.scss";
+@import "./modules/orion/orion";
+@import "./modules/orion/order";
+.ezp {
+    &__info {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

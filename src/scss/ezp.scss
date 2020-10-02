@@ -15,4 +15,39 @@
     &__wrapper {
         grid-template-rows: 50px auto;
     }
+    &__img {
+        border: 10px solid #121515;
+        background: #121515;
+        border-radius: 27px;
+        box-shadow: 4px 7px 24px 1px rgba(0, 0, 0, 0.13);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .order {
+        &__wrapper {
+            grid-template-rows: auto auto auto;
+        }
+        &__pics {
+            width: 559px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .order {
+        &__title {
+            margin-bottom: 10px;
+        }
+        &__img {
+            border-radius: 14px;
+            border-width: 5px;
+        }
+        &__pics {
+            width: 289px;
+            margin-bottom: 20px;
+        }
+    }
 }

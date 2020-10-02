@@ -13,9 +13,27 @@
         background-position: 0 center;
     }
     &__title {
-        width: 550px;
+        max-width: 550px;
     }
     &__text {
-        width: 550px;
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .shield {
+        text-align: center;
+        &__wrapper {
+            flex-direction: column;
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
     }
 }

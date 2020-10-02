@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const $counter = document.querySelector('.file_counter')
+    const $file = document.querySelector('.contacts__upload')
+    $file.addEventListener("change", function() {
+        const files = this.files
+
+        $counter.textContent = files.length
+        if (files.length) {
+            $counter.classList.add('file_counter--visible')
+        } else {
+            $counter.classList.remove('file_counter--visible')
+        }
+    })
+    const $form = document.querySelector('#form')
+    $form.onsubmit = async(e) => {
+        e.preventDefault()
+
+        await fetch('url', {
+            method: 'POST',
+            body: new FormData($form)
+        })
+
+    }
+
+
+
     ymaps.ready(function() {
 
         var myMap = new ymaps.Map('map2', {
@@ -15,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
+
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.

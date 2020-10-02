@@ -163,6 +163,7 @@
         display: flex;
         justify-content: space-between;
         cursor: pointer;
+        position: relative;
         &::before {
             content: '';
             display: block;
@@ -174,6 +175,23 @@
             width: 29px;
             height: 38px;
         }
+    }
+}
+
+.file_counter {
+    display: none;
+    position: absolute;
+    color: #fff;
+    background-color: $hover;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 12px;
+    left: 17px;
+    &--visible {
+        display: flex;
     }
 }
 

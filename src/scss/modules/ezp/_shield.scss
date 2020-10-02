@@ -14,9 +14,11 @@
     }
     &__title {
         max-width: 550px;
+        @include fsz(27px, 27px, 18px);
     }
     &__text {
         max-width: 550px;
+        @include fsz(18px, 18px, 13px);
     }
 }
 
@@ -31,6 +33,8 @@
             margin-right: 0;
             align-items: center;
             padding-bottom: 30px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
         &__title {
             margin-bottom: 15px;

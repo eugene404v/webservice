@@ -17,3 +17,4 @@
 * [Продукты](https://eugene404v.github.io/webservice/products.html)
 * [Представление наших SPA](https://eugene404v.github.io/webservice/spa.html)
 * [ERP-система](https://eugene404v.github.io/webservice/orion.html)
+* [CMS Stardisk](https://eugene404v.github.io/webservice/stardisk.html)

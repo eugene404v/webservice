@@ -28,6 +28,9 @@
 @mixin btn--hover {
     color: #fff;
     background-color: $hover;
+    &:hover {
+        color: #fff;
+    }
     &::after {
         display: block;
         content: "";

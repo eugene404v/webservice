@@ -1,0 +1,52 @@
+@import "./base.scss";
+@import "./modules/orion/orion";
+@import "./modules/orion/order";
+.stardisk {
+    &__info {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.order {
+    &__img {
+        &--sm {
+            left: auto;
+            right: -280px;
+        }
+    }
+    &__btn {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width:610px) {
+    .order {
+        &__img {
+            &--sm {
+                left: auto;
+                right: -80px;
+                width: 84px;
+                height: 154px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:610px) {
+    .order {
+        &__pics {
+            overflow: hidden;
+        }
+        &__img {
+            &--sm {
+                left: auto;
+                right: -50px;
+                width: 84px;
+                height: 154px;
+            }
+        }
+    }
+}

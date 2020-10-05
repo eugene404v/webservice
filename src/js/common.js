@@ -1,7 +1,7 @@
 //import './modules/stickyHeader'
 import './modules/hamburger'
 import './modules/map'
-/*
+
 import { openPopup, closePopup } from './modules/popup'
 
 if (document.querySelector('.popup')) {
@@ -21,4 +21,4 @@ if (document.querySelector('.popup')) {
             closePopup()
         })
     })
-}*/
+}

@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $counter = document.querySelector('.file_counter')
     const $file = document.querySelector('.contacts__upload')
-    const $overlay = document.querySelector('.popup__overlay')
-    const $close = document.querySelectorAll('.popup__close')
+
     $file.addEventListener("change", function() {
         const files = this.files
 

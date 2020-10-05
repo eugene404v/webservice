@@ -193,7 +193,7 @@
                     <p class="order__type">сроки</p>
                     <p class="order__descr">от 7 рабочих дней.</p>
                 </div>
-                <button class="btn btn--hover order__btn">заказать услугу</button>
+                <button class="btn btn--hover order__btn" id="popup-btn">заказать услугу</button>
             </div>
         </div>
     </div>
@@ -214,7 +214,27 @@
     </g>
     </symbol>
     
-    </svg>
+    </svg> <div class="popup">
+    <div class="popup__overlay"></div>
+    <section class="popup__order popup__window">
+        <button class="popup__close"></button>
+        <form action="" class="contacts__form" id="form">
+            <input type="text" name="name" id="" class="contacts__input" placeholder="имя">
+            <input type="email" name="email" id="" class="contacts__input" placeholder="e-mail">
+            <input type="text" name="subject" id="" class="contacts__input" placeholder="что будем делать?">
+            <div class="contacts__form-wrapper">
+                <input type="file" name="file" id="upload" class="contacts__upload">
+                <label for="upload" class="contacts__label"><span class="file_counter">9</span>Прикрепить бриф</label>
+                <button type="submit" class="btn btn--arrow contacts__btn">отправить</button>
+            </div>
+        </form>
+    </section>
+    <section class="popup__success  popup__window">
+        <button class="popup__close"></button>
+        <h2 class="popup__title">Ваша заявка успешно отправлена !</h2>
+        <img src="./img/popup-success.svg" alt="" class="popup__img">
+    </section>
+</div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=15c2f5b6-46ce-4480-8c2f-e97ba31ca255&lang=ru_RU" type="text/javascript" defer></script>
     <script src="common.js" defer></script>
 </body>

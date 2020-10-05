@@ -1,5 +1,7 @@
-<div class="popup__overlay">
-    <section class="popup__order">
+<div class="popup">
+    <div class="popup__overlay"></div>
+    <section class="popup__order popup__window">
+        <button class="popup__close"></button>
         <form action="" class="contacts__form" id="form">
             <input type="text" name="name" id="" class="contacts__input" placeholder="имя">
             <input type="email" name="email" id="" class="contacts__input" placeholder="e-mail">
@@ -11,7 +13,9 @@
             </div>
         </form>
     </section>
-    <section class="popup__success">
-
+    <section class="popup__success  popup__window">
+        <button class="popup__close"></button>
+        <h2 class="popup__title">Ваша заявка успешно отправлена !</h2>
+        <img src="./img/popup-success.svg" alt="" class="popup__img">
     </section>
 </div>

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $counter = document.querySelector('.file_counter')
     const $file = document.querySelector('.contacts__upload')
+    const $overlay = document.querySelector('.popup__overlay')
+    const $close = document.querySelectorAll('.popup__close')
     $file.addEventListener("change", function() {
         const files = this.files
 
@@ -11,16 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             $counter.classList.remove('file_counter--visible')
         }
     })
-    const $form = document.querySelector('#form')
-    $form.onsubmit = async(e) => {
-        e.preventDefault()
-
-        await fetch('url', {
-            method: 'POST',
-            body: new FormData($form)
-        })
-
-    }
 
 
 

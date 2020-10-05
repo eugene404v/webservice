@@ -39,6 +39,14 @@
         display: flex;
         &--pages {
             margin-top: 40px;
+            opacity: 0;
+            pointer-events: none;
+            transition: .2s;
+            &--active {
+                opacity: 1;
+                pointer-events: all;
+                transition: .2s;
+            }
         }
     }
     &__descr {
@@ -60,6 +68,7 @@
         margin-bottom: 37px;
     }
     &__header {
+        cursor: pointer;
         margin-right: 20px;
         &--active {
             color: $hover;
@@ -68,13 +77,31 @@
             margin-right: 0;
         }
     }
+    &__content {
+        &--switch {
+            height: 176px;
+            position: relative;
+        }
+    }
     &__list {
-        display: none;
+        position: absolute;
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+        display: flex;
         height: 176px;
+        width: 100%;
         flex-direction: column;
         flex-wrap: wrap;
+        &--test {
+            height: 220px;
+        }
         &--opened {
-            display: flex;
+            z-index: 1;
+            opacity: 1;
+            pointer-events: all;
+            transition: .3s;
         }
     }
     &__item {
@@ -82,6 +109,8 @@
         margin-right: 50px;
         @include fsz(16px, 14px, 14px);
         font-weight: 500;
+        cursor: pointer;
+        min-width: 355px;
         &--active {
             color: $hover;
         }
@@ -108,6 +137,7 @@
         }
     }
     &__page {
+        cursor: pointer;
         font-weight: 600;
         @include fsz(16px, 14px, 14px);
         color: #979696;
@@ -149,5 +179,36 @@
         width: 202px;
         box-shadow: 0px 4px 15px rgba(216, 100, 17, 0.4);
         margin-left: 212px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .calc {
+        font-size: 14px;
+        max-width: 660px;
+        &__headline {
+            padding-left: 28px;
+            height: 67px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__close {
+            top: 25px;
+            right: 25px;
+        }
+        &__headers {
+            padding: 14px 11px;
+        }
+        &__descr {
+            max-width: 135px;
+            &--price {
+                max-width: 196px;
+            }
+        }
+        &__btn {
+            flex-shrink: 0;
+            margin-left: auto;
+        }
     }
 }

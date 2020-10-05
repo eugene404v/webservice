@@ -3778,6 +3778,7 @@ var Glide$1 = function (_Core) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ "./src/js/modules/sliders.js");
 
+window.initMainSlider();
 
 /***/ }),
 
@@ -3792,118 +3793,121 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 
-new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', {
-  type: 'slider',
-  perView: 3,
-  gap: 40,
-  keyboard: true,
-  rewind: false,
-  peek: {
-    before: 0,
-    after: 150
-  },
-  classes: {
-    activeSlide: 'proj__slide--active'
-  },
-  breakpoints: {
-    1920: {
-      perView: 2,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 320
-      }
+
+window.initMainSlider = function () {
+  new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.projects__slider', {
+    type: 'slider',
+    perView: 3,
+    gap: 40,
+    keyboard: true,
+    rewind: false,
+    peek: {
+      before: 0,
+      after: 150
     },
-    1630: {
-      perView: 2,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 150
-      }
+    classes: {
+      activeSlide: 'proj__slide--active'
     },
-    1450: {
-      perView: 2,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 50
-      }
-    },
-    1250: {
-      perView: 2,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 0
-      }
-    },
-    1120: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 300
-      }
-    },
-    1050: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 250
-      }
-    },
-    992: {
-      perView: 2,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 100
-      }
-    },
-    780: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 320
-      }
-    },
-    710: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 270
-      }
-    },
-    660: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 210
-      }
-    },
-    590: {
-      perView: 1,
-      gap: 40,
-      peek: {
-        before: 0,
-        after: 150
-      }
-    },
-    540: {
-      perView: 1,
-      gap: 0,
-      peek: {
-        before: 0,
-        after: 150
+    breakpoints: {
+      1920: {
+        perView: 2,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 320
+        }
+      },
+      1630: {
+        perView: 2,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 150
+        }
+      },
+      1450: {
+        perView: 2,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 50
+        }
+      },
+      1250: {
+        perView: 2,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 0
+        }
+      },
+      1120: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 300
+        }
+      },
+      1050: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 250
+        }
+      },
+      992: {
+        perView: 2,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 100
+        }
+      },
+      780: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 320
+        }
+      },
+      710: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 270
+        }
+      },
+      660: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 210
+        }
+      },
+      590: {
+        perView: 1,
+        gap: 40,
+        peek: {
+          before: 0,
+          after: 150
+        }
+      },
+      540: {
+        perView: 1,
+        gap: 0,
+        peek: {
+          before: 0,
+          after: 150
+        }
       }
     }
-  }
-}).mount();
+  }).mount();
+};
 
 /***/ })
 

@@ -84,11 +84,11 @@ gulp.task('sass', function(callback) {
 //});
 
 gulp.task("build-js", () => {
-    return gulp.src("./src/js/common.js")
+    return gulp.src("./src/js/main.js")
         .pipe(webpack({
             mode: 'development',
             output: {
-                filename: 'common.js'
+                filename: 'script.js'
             },
             watch: false,
             devtool: "source-map",

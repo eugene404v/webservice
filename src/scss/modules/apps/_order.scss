@@ -1,24 +1,25 @@
 .order {
-    background: url('./../img/app-bg.png') no-repeat 70% 0, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
     padding-top: 30px;
     padding-bottom: 60px;
     color: #fff;
+    animation-name: opacityFade;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    position: relative;
+    overflow: hidden;
     &__wrapper {
         @include wrapper;
     }
     &__title {
         max-width: 513px;
-        @include fsz(24px,
-        24px,
-        18px);
+        @include fsz(24px, 24px, 18px);
     }
     &__text {
         max-width: 350px;
         margin-top: 30px;
         margin-bottom: 30px;
-        @include fsz(18px,
-        18px,
-        14px);
+        @include fsz(18px, 18px, 14px);
     }
     &__btn {
         width: 218px;
@@ -34,11 +35,43 @@
             color: $dark-text;
         }
     }
+    &__pics {
+        position: absolute;
+        bottom: -260px;
+        animation-name: pics;
+        animation-timing-function: linear;
+        animation-duration: 5s;
+        left: 780px;
+    }
+    &__sm {
+        position: absolute;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        &--1 {
+            left: -31px;
+            top: 92px;
+            animation-name: sm1;
+        }
+        &--2 {
+            left: 70px;
+            top: 158px;
+            animation-name: sm2;
+        }
+        &--3 {
+            left: 171px;
+            top: 209px;
+            animation-name: sm3;
+        }
+    }
 }
 
 @media screen and (max-width:1100px) {
     .order {
         background: url('./../img/app-bg.png') no-repeat 90% 0, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+        animation: none;
+        &__pics {
+            display: none;
+        }
     }
 }
 
@@ -75,5 +108,60 @@
             margin-top: 300px;
             margin-bottom: 10px;
         }
+    }
+}
+
+@keyframes opacityFade {
+    0% {
+        opacity: 0;
+        color: transparent;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+@keyframes pics {
+    0% {
+        bottom: -600px;
+    }
+    100% {
+        bottom: -260px;
+    }
+}
+
+@keyframes sm1 {
+    0% {
+        left: -100px;
+        top: 40px;
+    }
+    100% {
+        left: -31px;
+        top: 92px;
+    }
+}
+
+@keyframes sm2 {
+    0% {
+        left: 70px;
+        top: 1px;
+    }
+    100% {
+        left: 70px;
+        top: 158px;
+    }
+}
+
+@keyframes sm3 {
+    0% {
+        left: 260px;
+        top: 230px;
+    }
+    100% {
+        left: 171px;
+        top: 209px;
     }
 }

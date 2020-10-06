@@ -4,6 +4,8 @@ const price = document.querySelector('.calc__price')
 const items = document.querySelectorAll('.calc__item')
 const pages = document.querySelectorAll('.calc__page')
 let result = 0
+let count = 0
+let kf = 0
 
 headers.forEach((el, i) => {
     el.addEventListener('click', () => {
@@ -26,9 +28,11 @@ headers.forEach((el, i) => {
 items.forEach((el, i) => {
     el.addEventListener('click', () => {
         items.forEach(elem => elem.classList.remove('calc__item--active'))
+        pages.forEach(elem => elem.classList.remove('calc__page--active'))
+        pages[0].classList.add('calc__page--active')
         el.classList.add('calc__item--active')
-        result = el.dataset.price
-        price.textContent = `${result} руб.`
+        count = el.dataset.price
+        price.textContent = `${count} руб.`
     })
 })
 
@@ -36,7 +40,8 @@ pages.forEach(el => {
     el.addEventListener('click', () => {
         pages.forEach(elem => elem.classList.remove('calc__page--active'))
         el.classList.add('calc__page--active')
-        result = Math.floor(result * el.dataset.kf)
+        kf = el.dataset.kf
+        result = Math.floor(count * kf)
         price.textContent = `${result} руб.`
     })
 

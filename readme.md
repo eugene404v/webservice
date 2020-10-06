@@ -19,3 +19,4 @@
 * [ERP-система](https://eugene404v.github.io/webservice/orion.html)
 * [CMS Stardisk](https://eugene404v.github.io/webservice/stardisk.html)
 * [Выпуск ЭЦП](https://eugene404v.github.io/webservice/ezp.html)
+* [Калькулятор](https://eugene404v.github.io/webservice/calculator.html)

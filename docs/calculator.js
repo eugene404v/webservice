@@ -1595,6 +1595,8 @@ var price = document.querySelector('.calc__price');
 var items = document.querySelectorAll('.calc__item');
 var pages = document.querySelectorAll('.calc__page');
 var result = 0;
+var count = 0;
+var kf = 0;
 headers.forEach(function (el, i) {
   el.addEventListener('click', function () {
     headers.forEach(function (elem) {
@@ -1624,9 +1626,13 @@ items.forEach(function (el, i) {
     items.forEach(function (elem) {
       return elem.classList.remove('calc__item--active');
     });
+    pages.forEach(function (elem) {
+      return elem.classList.remove('calc__page--active');
+    });
+    pages[0].classList.add('calc__page--active');
     el.classList.add('calc__item--active');
-    result = el.dataset.price;
-    price.textContent = "".concat(result, " \u0440\u0443\u0431.");
+    count = el.dataset.price;
+    price.textContent = "".concat(count, " \u0440\u0443\u0431.");
   });
 });
 pages.forEach(function (el) {
@@ -1635,7 +1641,8 @@ pages.forEach(function (el) {
       return elem.classList.remove('calc__page--active');
     });
     el.classList.add('calc__page--active');
-    result = Math.floor(result * el.dataset.kf);
+    kf = el.dataset.kf;
+    result = Math.floor(count * kf);
     price.textContent = "".concat(result, " \u0440\u0443\u0431.");
   });
 });

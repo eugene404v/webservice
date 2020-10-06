@@ -175,6 +175,8 @@
     &__price {
         @include fsz(30px, 25px, 25px);
         font-weight: 700;
+        width: 200px;
+        text-align: center;
     }
     &__btn {
         height: 52px;

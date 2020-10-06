@@ -1,15 +1,12 @@
 .order {
     background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
-    padding-top: 30px;
-    padding-bottom: 60px;
     color: #fff;
-    animation-name: opacityFade;
-    animation-timing-function: linear;
-    animation-duration: 5s;
-    position: relative;
-    overflow: hidden;
     &__wrapper {
         @include wrapper;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 60px;
+        padding-top: 30px;
     }
     &__title {
         max-width: 513px;
@@ -40,12 +37,12 @@
         bottom: -260px;
         animation-name: pics;
         animation-timing-function: linear;
-        animation-duration: 5s;
-        left: 780px;
+        animation-duration: 1s;
+        left: 790px;
     }
     &__sm {
         position: absolute;
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-timing-function: linear;
         &--1 {
             left: -31px;
@@ -111,19 +108,6 @@
     }
 }
 
-@keyframes opacityFade {
-    0% {
-        opacity: 0;
-        color: transparent;
-    }
-    30% {
-        opacity: 1;
-    }
-    100% {
-        color: #fff;
-    }
-}
-
 @keyframes pics {
     0% {
         bottom: -600px;
@@ -134,7 +118,8 @@
 }
 
 @keyframes sm1 {
-    0% {
+    0%,
+    60% {
         left: -100px;
         top: 40px;
     }
@@ -145,7 +130,8 @@
 }
 
 @keyframes sm2 {
-    0% {
+    0%,
+    60% {
         left: 70px;
         top: 1px;
     }
@@ -156,7 +142,8 @@
 }
 
 @keyframes sm3 {
-    0% {
+    0%,
+    60% {
         left: 260px;
         top: 230px;
     }

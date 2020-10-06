@@ -1598,22 +1598,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_4__["openPopup"];
+window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"];
 
-if (document.querySelector('.popup')) {
-  var popupTrigger = document.querySelector('#popup-btn');
-  popupTrigger.addEventListener('click', function () {
-    Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["openPopup"])('.popup__order');
-  });
-  var popupOverlay = document.querySelector('.popup__overlay');
-  var closeBtns = document.querySelectorAll('.popup__close');
-  popupOverlay.addEventListener('click', function () {
-    Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"])();
-  });
-  closeBtns.forEach(function (el) {
-    el.addEventListener('click', function () {
+window.popUpFunc = function (triggerSelector) {
+  if (document.querySelector('.popup')) {
+    var popupTrigger = document.querySelectorAll(triggerSelector);
+    popupTrigger.forEach(function (el) {
+      el.addEventListener('click', function () {
+        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["openPopup"])('.popup__order');
+      });
+    });
+    var popupOverlay = document.querySelector('.popup__overlay');
+    var closeBtns = document.querySelectorAll('.popup__close');
+    popupOverlay.addEventListener('click', function () {
       Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"])();
     });
-  });
+    closeBtns.forEach(function (el) {
+      el.addEventListener('click', function () {
+        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"])();
+      });
+    });
+  }
+};
+
+if (document.querySelector('.btn--popup')) {
+  window.popUpFunc('.btn--popup');
 }
 
 /***/ }),

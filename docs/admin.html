@@ -128,7 +128,27 @@
 
 
     </div>
-</header>
+</header> <div class="popup">
+    <div class="popup__overlay"></div>
+    <section class="popup__order popup__window">
+        <button class="popup__close"></button>
+        <form action="" class="contacts__form" id="form">
+            <input type="text" name="name" id="" class="contacts__input" placeholder="имя">
+            <input type="email" name="email" id="" class="contacts__input" placeholder="e-mail">
+            <input type="text" name="subject" id="" class="contacts__input" placeholder="что будем делать?">
+            <div class="contacts__form-wrapper">
+                <input type="file" name="file" id="upload" class="contacts__upload">
+                <label for="upload" class="contacts__label"><span class="file_counter">9</span>Прикрепить бриф</label>
+                <button type="submit" class="btn btn--arrow contacts__btn">отправить</button>
+            </div>
+        </form>
+    </section>
+    <section class="popup__success  popup__window">
+        <button class="popup__close"></button>
+        <h2 class="popup__title">Ваша заявка успешно отправлена !</h2>
+        <img src="./img/popup-success.svg" alt="" class="popup__img">
+    </section>
+</div>
     <main>
         <section class="admin">
     <div class="admin__wrapper">
@@ -143,7 +163,7 @@
                     <li class="admin__item">Обновление каталогов товаров и услуг</li>
                     <li class="admin__item">Удаление устаревших данных</li>
                 </ul>
-                <button class="admin__btn btn btn--hover">заказать услугу</button>
+                <button class="admin__btn btn btn--hover btn--popup">заказать услугу</button>
             </div>
             <div class="admin__section admin__section--dark">
                 <h2 class="admin__subtitle admin__subtitle--dark">Техническое администрирование</h2>
@@ -158,7 +178,7 @@
                     <li class="admin__item admin__item--dark">Работа с запросами пользователей</li>
                     <li class="admin__item admin__item--dark">Оптимизация кода сайта</li>
                 </ul>
-                <button class="admin__btn btn admin__btn--dark" id="popup-btn">заказать услугу</button>
+                <button class="admin__btn btn admin__btn--dark btn--popup" id="popup-btn">заказать услугу</button>
             </div>
         </div>
         <a href="#" class="btn btn--noborder admin__others">другие услуги</a>

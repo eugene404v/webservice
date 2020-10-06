@@ -1,6 +1,8 @@
 .features {
     padding-top: 40px;
     padding-bottom: 45px;
+    background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    color: #fff;
     &__wrapper {
         @include wrapper;
     }
@@ -19,7 +21,6 @@
         width: 286px;
         height: 149px;
         position: relative;
-        border: 8px solid #DDDDDD;
         box-sizing: border-box;
         border-radius: 25px;
         display: flex;
@@ -29,6 +30,9 @@
         padding: 20px;
         font-size: 16px;
         font-weight: 600;
+        background: #152238;
+        box-shadow: 0px 4px 28px rgba(255, 255, 255, 0.11);
+        border: 8px solid #152238;
         &::before {
             box-sizing: padding-box;
             display: flex;
@@ -41,10 +45,9 @@
             top: 50%;
             left: -24px;
             transform: translateY(-50%);
-            color: #fff;
-            border: 5px solid #fff;
+            color: $dark-text;
+            background-color: #fff;
             font-size: 24px;
-            background-color: $hover;
         }
         &:nth-child(1)::before {
             content: '1.';

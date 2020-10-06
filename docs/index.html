@@ -130,7 +130,27 @@
 
 
     </div>
-</header>
+</header> <div class="popup">
+    <div class="popup__overlay"></div>
+    <section class="popup__order popup__window">
+        <button class="popup__close"></button>
+        <form action="" class="contacts__form" id="form">
+            <input type="text" name="name" id="" class="contacts__input" placeholder="имя">
+            <input type="email" name="email" id="" class="contacts__input" placeholder="e-mail">
+            <input type="text" name="subject" id="" class="contacts__input" placeholder="что будем делать?">
+            <div class="contacts__form-wrapper">
+                <input type="file" name="file" id="upload" class="contacts__upload">
+                <label for="upload" class="contacts__label"><span class="file_counter">9</span>Прикрепить бриф</label>
+                <button type="submit" class="btn btn--arrow contacts__btn">отправить</button>
+            </div>
+        </form>
+    </section>
+    <section class="popup__success  popup__window">
+        <button class="popup__close"></button>
+        <h2 class="popup__title">Ваша заявка успешно отправлена !</h2>
+        <img src="./img/popup-success.svg" alt="" class="popup__img">
+    </section>
+</div>
     <main>
 
 
@@ -162,7 +182,7 @@
             <h2 class="promo__title">которые работают</h2>
         </div>
         <div class="promo__btn">
-            <button class="promo__button btn btn--arrow">обсудить проект</button>
+            <button class="promo__button btn btn--arrow btn--popup">обсудить проект</button>
         </div>
         <div class="promo__works">
             <h3 class="promo__subtitle">последние работы :</h3>
@@ -269,7 +289,7 @@
             <p class="about__content">Digital-агентство полного цикла с упором на веб-разработку и создание сложных проектов. <span class="about__content--bold">Знаем, как сделать так, чтобы сайт был не только удобным, но и красивым.</span> </p>
         </div>
         <div class="about__btn">
-            <button class="btn btn--arrow about__button">обсудить проект</button>
+            <button class="btn btn--arrow about__button btn--popup">обсудить проект</button>
         </div>
         <ul class="about__list">
             <li class="about__item">

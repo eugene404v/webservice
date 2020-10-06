@@ -1,0 +1,13 @@
+.features {
+    background: #fff;
+    color: $dark-text;
+    &__item {
+        background-color: transparent;
+        border-color: #DDDDDD;
+        &:before {
+            background-color: $hover;
+            color: #fff;
+            border: 3px solid #fff;
+        }
+    }
+}

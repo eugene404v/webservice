@@ -1618,6 +1618,8 @@ headers.forEach(function (el, i) {
     }
 
     result = 0;
+    count = 0;
+    kf = 0;
     price.textContent = "0 \u0440\u0443\u0431.";
   });
 });

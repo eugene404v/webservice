@@ -21,6 +21,8 @@ headers.forEach((el, i) => {
             document.querySelector('.calc__pair--pages').classList.add('calc__pair--pages--active')
         }
         result = 0
+        count = 0
+        kf = 0
         price.textContent = `0 руб.`
     })
 })

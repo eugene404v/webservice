@@ -22,6 +22,13 @@
         background-image: url('./../img/arrow.svg');
         background-repeat: no-repeat;
         background-position: left 0 center;
+        transition: .3s;
+    }
+    &:hover {
+        &::after {
+            transition: .3s;
+            background-position: right center;
+        }
     }
 }
 

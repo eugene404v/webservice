@@ -1626,6 +1626,18 @@ if (document.querySelector('.btn--popup')) {
   window.popUpFunc('.btn--popup');
 }
 
+if (document.querySelector('.testing__percents')) {
+  var i = 0;
+  var intervalId = setInterval(function () {
+    document.querySelector('.testing__percents').textContent = "".concat(i, "%");
+    i++;
+
+    if (i === 68) {
+      clearInterval(intervalId);
+    }
+  }, 20);
+}
+
 /***/ }),
 
 /***/ "./src/js/modules/hamburger.js":

@@ -31,3 +31,15 @@ window.popUpFunc = function(triggerSelector) {
 if (document.querySelector('.btn--popup')) {
     window.popUpFunc('.btn--popup')
 }
+
+if (document.querySelector('.testing__percents')) {
+    let i = 0
+    const intervalId = setInterval(() => {
+        document.querySelector('.testing__percents').textContent = `${i}%`
+        i++
+        if (i === 68) {
+            clearInterval(intervalId)
+        }
+    }, 20)
+
+}

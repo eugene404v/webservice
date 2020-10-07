@@ -1772,6 +1772,9 @@ function closePopup() {
   popups.forEach(function (el) {
     return el.classList.remove('popup__window--opened');
   });
+  popups.forEach(function (el) {
+    return el.style.display = "none";
+  });
 }
 
 /***/ })

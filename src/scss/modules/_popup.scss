@@ -23,7 +23,6 @@ main {
         }
     }
     &__overlay {
-        animation: linear fadeDown .5s;
         display: none;
         position: absolute;
         top: 0;
@@ -72,7 +71,6 @@ main {
         transform: translateX(-50%) translateY(-50%);
         display: none;
         z-index: 0;
-        animation: linear fadeDown .5s;
         &--opened {
             display: block;
             z-index: 5;

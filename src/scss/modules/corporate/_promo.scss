@@ -50,6 +50,9 @@
             left: -70px;
         }
     }
+    &__img {
+        height: auto !important;
+    }
     &__btn {
         position: absolute;
         transition: 2s;

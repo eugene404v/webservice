@@ -15,7 +15,7 @@ main {
     height: 100%;
     &--opened {
         display: block;
-        z-index: 2;
+        z-index: 6;
         opacity: 1;
         & .popup__overlay {
             display: block;
@@ -73,7 +73,7 @@ main {
         z-index: 0;
         &--opened {
             display: block;
-            z-index: 5;
+            z-index: 6;
             opacity: 1;
             animation: linear fadeUp .5s;
         }

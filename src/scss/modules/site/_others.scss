@@ -130,7 +130,8 @@
         &__category {
             padding: 3px 7px 6px 7px;
             margin-bottom: 15px;
-            &--active {
+            &--active,
+            &:hover {
                 background-color: $hover;
                 border-radius: 21px;
                 color: #fff;

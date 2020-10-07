@@ -29,6 +29,8 @@
     &__soc {
         grid-area: soc;
         padding-top: 80px;
+        display: flex;
+        flex-direction: column;
     }
     &__soc-item {
         font-weight: 600;
@@ -175,6 +177,8 @@
         &__soc {
             padding-top: 65px;
             margin-top: 0;
+            flex-direction: row;
+            margin-right: 0;
             & li {
                 margin-right: 30px;
                 &:last-child {

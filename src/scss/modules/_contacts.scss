@@ -155,8 +155,8 @@
     .contacts {
         padding-top: 40px;
         &__wrapper {
-            grid-template-columns: 1fr auto;
-            grid-template-areas: "head soc" "mail soc" "form form" "adr adr";
+            grid-template-columns: 1fr;
+            grid-template-areas: "head" "mail" "soc" "form" "adr";
         }
         &__headline {
             position: relative;
@@ -165,7 +165,7 @@
         &__subtitle {
             position: absolute;
             top: 10px;
-            width: 110%;
+            width: 100%;
             font-size: 16px;
         }
         &__title {
@@ -175,9 +175,23 @@
         &__soc {
             padding-top: 65px;
             margin-top: 0;
+            & li {
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__soc-item {
+            font-size: 0;
+            padding-left: 0;
+            margin-right: 0;
         }
         &__mail {
             margin-top: 20px;
+            & a {
+                text-align: center;
+            }
         }
         &__form {
             width: 100%;

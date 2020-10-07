@@ -15,6 +15,6 @@ export function closePopup() {
 
     popupContainer.classList.remove('popup--opened')
     popups.forEach(el => el.classList.remove('popup__window--opened'))
-    popups.forEach(el => el.style.display = "none")
+
 
 }

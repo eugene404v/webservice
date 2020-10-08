@@ -207,7 +207,7 @@ a:not([href]) {
     }
     .proj {
         width: 290px;
-        height: 300px;
+        height: 360px;
         padding: 18px;
         opacity: .5;
         &__slide--active~li .proj {
@@ -222,7 +222,7 @@ a:not([href]) {
         &:active,
         &:hover {
             opacity: 1;
-            height: 315px;
+            height: 390px;
             padding-top: 23px;
         }
         &__subtitle {

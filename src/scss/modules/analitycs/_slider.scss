@@ -88,29 +88,33 @@
             z-index: 1;
             opacity: 1;
             transition: .3s;
+            & img {
+                animation-timing-function: ease-in;
+                animation-duration: .5s;
+            }
             & .slider__tech--sm {
-                animation: ease-in tech 1s;
+                animation-name: tech;
             }
             & .slider__seo--sq2 {
-                animation: ease-in seo-sq2 1s;
+                animation-name: seo-sq2;
             }
             & .slider__seo--line1 {
-                animation: ease-in seo-line1 1s;
+                animation-name: seo-line1;
             }
             & .slider__seo--line2 {
-                animation: ease-in seo-line2 1s;
+                animation-name: seo-line2;
             }
             & .slider__mark--center {
-                animation: ease-in mark-center 1s;
+                animation-name: mark-center;
             }
             & .slider__mark--top {
-                animation: ease-in mark-top 1s;
+                animation-name: mark-top;
             }
             & .slider__ux--bottom {
-                animation: ease-in ux-bottom 1s;
+                animation-name: ux-bottom;
             }
             & .slider__ux--top {
-                animation: ease-in ux-top 1s;
+                animation-name: ux-top;
             }
         }
     }

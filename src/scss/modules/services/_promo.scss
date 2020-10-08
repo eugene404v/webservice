@@ -36,6 +36,8 @@
             margin-bottom: 40px;
         }
         &__header {
+            position: relative;
+            z-index: 1;
             padding: 8px 20px;
             font-weight: 500;
             opacity: .5;

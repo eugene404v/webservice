@@ -1591,32 +1591,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/map */ "./src/js/modules/map.js");
 /* harmony import */ var _modules_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_map__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
+/* harmony import */ var _modules_calculator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/calculator */ "./src/js/modules/calculator.js");
+/* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
 
 
 //import './modules/stickyHeader'
 
 
 
-window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_4__["openPopup"];
-window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"];
+
+window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_5__["openPopup"];
+window.openPopup = _modules_popup__WEBPACK_IMPORTED_MODULE_5__["closePopup"];
 
 window.popUpFunc = function (triggerSelector) {
   if (document.querySelector('.popup')) {
     var popupTrigger = document.querySelectorAll(triggerSelector);
     popupTrigger.forEach(function (el) {
       el.addEventListener('click', function () {
-        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["openPopup"])('.popup__order');
+        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_5__["openPopup"])('.popup__order');
       });
     });
     var popupOverlay = document.querySelector('.popup__overlay');
     var closeBtns = document.querySelectorAll('.popup__close');
     popupOverlay.addEventListener('click', function () {
-      Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"])();
+      Object(_modules_popup__WEBPACK_IMPORTED_MODULE_5__["closePopup"])();
     });
     closeBtns.forEach(function (el) {
       el.addEventListener('click', function () {
-        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_4__["closePopup"])();
+        Object(_modules_popup__WEBPACK_IMPORTED_MODULE_5__["closePopup"])();
       });
     });
   }
@@ -1636,6 +1638,122 @@ if (document.querySelector('.testing__percents')) {
       clearInterval(intervalId);
     }
   }, 20);
+}
+
+if (document.querySelector('.file_counter')) {
+  var $counter = document.querySelector('.file_counter');
+  var $file = document.querySelector('.contacts__upload');
+  $file.addEventListener("change", function () {
+    var files = this.files;
+    $counter.textContent = files.length;
+
+    if (files.length) {
+      $counter.classList.add('file_counter--visible');
+    } else {
+      $counter.classList.remove('file_counter--visible');
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/calculator.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/calculator.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+if (document.querySelector('.calc')) {
+  var headers = document.querySelectorAll('.calc__header');
+  var lists = document.querySelectorAll('.calc__list');
+  var price = document.querySelector('.calc__price');
+  var items = document.querySelectorAll('.calc__item');
+  var pages = document.querySelectorAll('.calc__page');
+  var result = 0;
+  var count = 0;
+  var kf = 0;
+  headers.forEach(function (el, i) {
+    el.addEventListener('click', function () {
+      headers.forEach(function (elem) {
+        return elem.classList.remove('calc__header--active');
+      });
+      el.classList.add('calc__header--active');
+      lists.forEach(function (elem) {
+        return elem.classList.remove('calc__list--opened');
+      });
+      lists[i].classList.add('calc__list--opened');
+      items.forEach(function (elem) {
+        return elem.classList.remove('calc__item--active');
+      });
+
+      if (i !== 0) {
+        document.querySelector('.calc__pair--pages').classList.remove('calc__pair--pages--active');
+      } else {
+        document.querySelector('.calc__pair--pages').classList.add('calc__pair--pages--active');
+      }
+
+      result = 0;
+      count = 0;
+      kf = 0;
+      price.textContent = "0 \u0440\u0443\u0431.";
+    });
+  });
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () {
+      items.forEach(function (elem) {
+        return elem.classList.remove('calc__item--active');
+      });
+      pages.forEach(function (elem) {
+        return elem.classList.remove('calc__page--active');
+      });
+      pages[0].classList.add('calc__page--active');
+      el.classList.add('calc__item--active');
+      count = el.dataset.price;
+      price.textContent = "".concat(count, " \u0440\u0443\u0431.");
+    });
+  });
+  pages.forEach(function (el) {
+    el.addEventListener('click', function () {
+      pages.forEach(function (elem) {
+        return elem.classList.remove('calc__page--active');
+      });
+      el.classList.add('calc__page--active');
+      kf = el.dataset.kf;
+      result = Math.floor(count * kf);
+      price.textContent = "".concat(result, " \u0440\u0443\u0431.");
+    });
+  });
+  var calcTrigger = document.querySelector('.header__calc');
+  var calc = document.querySelector('.calc');
+  var main = document.querySelector('main');
+  var calcClose = document.querySelector('.calc__close');
+  var calcBtn = document.querySelector('.calc__btn');
+  var calcOverlay = document.querySelector('.calc__overlay');
+  calcTrigger.addEventListener('click', openCalc);
+  [main, calcClose].forEach(function (el) {
+    return el.addEventListener('click', closeCalc);
+  });
+  calcBtn.addEventListener('click', closeCalc);
+
+  function openCalc() {
+    calc.classList.add('calc--opened');
+    calcOverlay.classList.add('calc__overlay--opened');
+  }
+
+  function closeCalc() {
+    calc.classList.remove('calc--opened');
+    calcOverlay.classList.remove('calc__overlay--opened');
+  }
 }
 
 /***/ }),

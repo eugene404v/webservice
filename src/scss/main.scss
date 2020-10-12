@@ -1,6 +1,8 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
-@import "./base.scss";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 //
 @import "./modules/promo";
 @import "./modules/projects";

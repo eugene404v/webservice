@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
     <title>Веб-сервис</title>
 </head>
 
@@ -37,6 +38,7 @@
         </div>
 
         <div class="header__contacts--mobile">
+            <button class="header__calc"></button>
             <div class="header__address">
                 <p class="header__contact header__contact--address">
 
@@ -149,6 +151,89 @@
         <button class="popup__close"></button>
         <h2 class="popup__title">Ваша заявка успешно отправлена !</h2>
         <img src="./img/popup-success.svg" alt="" class="popup__img">
+    </section>
+</div>
+
+
+
+
+
+
+
+<div class="calc__overlay">
+    <section class="calc">
+        <div class="calc__headline">
+            <h2 class="calc__title">Калькулятор примерной стоимости проекта</h2>
+            <button class="calc__close"></button>
+        </div>
+        <div class="calc__pair">
+            <h3 class="calc__descr">Выберите тип услуги :</h3>
+            <div class="calc__content">
+                <ul class="calc__headers">
+                    <li class="calc__header calc__header--active">Веб-разработка</li>
+                    <li class="calc__header">Тестирование</li>
+                    <li class="calc__header">Повышение эффективности</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="calc__pair">
+            <h3 class="calc__descr">Выберите тип вашего проекта :</h3>
+            <div class="calc__content calc__content--switch">
+
+                <ul class="calc__list calc__list--opened">
+                    <li class="calc__item" data-price="22222">Сложные веб-сервисы и интеграции</li>
+                    <li class="calc__item" data-price="222">Корпоративный сайт</li>
+                    <li class="calc__item" data-price="22422">Портал обучения сотрудников</li>
+                    <li class="calc__item" data-price="2552">ERP-системы</li>
+                    <li class="calc__item" data-price="922">Интернет-магазины</li>
+                    <li class="calc__item" data-price="2882">Промо-сайты и LP</li>
+                    <li class="calc__item" data-price="234">Интернет-каталог</li>
+                </ul>
+
+
+                <ul class="calc__list calc__list--test">
+                    <li class="calc__item" data-price="22222">Сопровождение и администрирование сайтов</li>
+                    <li class="calc__item" data-price="21122">Развитие существующих веб-приложений</li>
+                    <li class="calc__item" data-price="22">Тестирование сайта на уязвимости</li>
+                    <li class="calc__item" data-price="245">Функциональное тестирование</li>
+                    <li class="calc__item" data-price="2000">Нагрузочное тестирование</li>
+                </ul>
+
+
+                <ul class="calc__list">
+                    <li class="calc__item" data-price="22222">Внедрение CRM</li>
+                    <li class="calc__item" data-price="2999">Автоматизация бизнес-процессов</li>
+                    <li class="calc__item" data-price="289654">Внедрение систем учёта</li>
+                    <li class="calc__item" data-price="2232422">Аналитика</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="calc__pair calc__pair--pages calc__pair--pages--active">
+            <h3 class="calc__descr">Кол-во страниц :</h3>
+            <ul class="calc__pages">
+                <li class="calc__page calc__page--active" data-kf="1">до 5</li>
+                <li class="calc__page" data-kf="1.5">5-15</li>
+                <li class="calc__page" data-kf="1.8">15-40</li>
+                <li class="calc__page" data-kf="2">40-90</li>
+                <li class="calc__page" data-kf="5">90-150</li>
+            </ul>
+        </div>
+
+        <div class="calc__bottom">
+            <div class="calc__pair">
+                <h3 class="calc__descr calc__descr--price">Ориентировочный бюджет вашего проекта :</h3>
+                <p class="calc__price">0 руб.</p>
+            </div>
+            <button class="calc__btn btn btn--hover btn--popup">оформить заказ</button>
+        </div>
+
+
+
     </section>
 </div>
     <main>
@@ -367,11 +452,16 @@
             <a href="tel:+78124099200" class="contacts__tel">+7 (812) 40-99-200</a>
             <a href="mailto:info@serviceweb.su" class="contacts__email">info@serviceweb.su</a>
         </div>
-        <form action="" class="contacts__form">
+        <form action="" class="contacts__form" id="form">
             <input type="text" name="name" id="" class="contacts__input" placeholder="имя">
             <input type="email" name="email" id="" class="contacts__input" placeholder="e-mail">
             <input type="text" name="subject" id="" class="contacts__input" placeholder="что будем делать?">
-            <button type="submit" class="btn btn--arrow contacts__btn">отправить</button>
+            <div class="contacts__form-wrapper">
+                <input type="file" name="file" id="upload" class="contacts__upload">
+                <label for="upload" class="contacts__label"><span class="file_counter">9</span>Прикрепить бриф</label>
+                <button type="submit" class="btn btn--arrow contacts__btn">отправить</button>
+            </div>
+
         </form>
     </div>
 </section></div>

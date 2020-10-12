@@ -1,4 +1,6 @@
-@import './base';
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 //
 @import './modules/spa/spa';
 @import './modules/spa/headline';

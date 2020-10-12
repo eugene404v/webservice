@@ -1589,65 +1589,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var headers = document.querySelectorAll('.calc__header');
-var lists = document.querySelectorAll('.calc__list');
-var price = document.querySelector('.calc__price');
-var items = document.querySelectorAll('.calc__item');
-var pages = document.querySelectorAll('.calc__page');
-var result = 0;
-var count = 0;
-var kf = 0;
-headers.forEach(function (el, i) {
-  el.addEventListener('click', function () {
-    headers.forEach(function (elem) {
-      return elem.classList.remove('calc__header--active');
-    });
-    el.classList.add('calc__header--active');
-    lists.forEach(function (elem) {
-      return elem.classList.remove('calc__list--opened');
-    });
-    lists[i].classList.add('calc__list--opened');
-    items.forEach(function (elem) {
-      return elem.classList.remove('calc__item--active');
-    });
 
-    if (i !== 0) {
-      document.querySelector('.calc__pair--pages').classList.remove('calc__pair--pages--active');
-    } else {
-      document.querySelector('.calc__pair--pages').classList.add('calc__pair--pages--active');
-    }
+if (document.querySelector('.calc')) {
+  var headers = document.querySelectorAll('.calc__header');
+  var lists = document.querySelectorAll('.calc__list');
+  var price = document.querySelector('.calc__price');
+  var items = document.querySelectorAll('.calc__item');
+  var pages = document.querySelectorAll('.calc__page');
+  var result = 0;
+  var count = 0;
+  var kf = 0;
+  headers.forEach(function (el, i) {
+    el.addEventListener('click', function () {
+      headers.forEach(function (elem) {
+        return elem.classList.remove('calc__header--active');
+      });
+      el.classList.add('calc__header--active');
+      lists.forEach(function (elem) {
+        return elem.classList.remove('calc__list--opened');
+      });
+      lists[i].classList.add('calc__list--opened');
+      items.forEach(function (elem) {
+        return elem.classList.remove('calc__item--active');
+      });
 
-    result = 0;
-    count = 0;
-    kf = 0;
-    price.textContent = "0 \u0440\u0443\u0431.";
-  });
-});
-items.forEach(function (el, i) {
-  el.addEventListener('click', function () {
-    items.forEach(function (elem) {
-      return elem.classList.remove('calc__item--active');
+      if (i !== 0) {
+        document.querySelector('.calc__pair--pages').classList.remove('calc__pair--pages--active');
+      } else {
+        document.querySelector('.calc__pair--pages').classList.add('calc__pair--pages--active');
+      }
+
+      result = 0;
+      count = 0;
+      kf = 0;
+      price.textContent = "0 \u0440\u0443\u0431.";
     });
-    pages.forEach(function (elem) {
-      return elem.classList.remove('calc__page--active');
-    });
-    pages[0].classList.add('calc__page--active');
-    el.classList.add('calc__item--active');
-    count = el.dataset.price;
-    price.textContent = "".concat(count, " \u0440\u0443\u0431.");
   });
-});
-pages.forEach(function (el) {
-  el.addEventListener('click', function () {
-    pages.forEach(function (elem) {
-      return elem.classList.remove('calc__page--active');
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () {
+      items.forEach(function (elem) {
+        return elem.classList.remove('calc__item--active');
+      });
+      pages.forEach(function (elem) {
+        return elem.classList.remove('calc__page--active');
+      });
+      pages[0].classList.add('calc__page--active');
+      el.classList.add('calc__item--active');
+      count = el.dataset.price;
+      price.textContent = "".concat(count, " \u0440\u0443\u0431.");
     });
-    el.classList.add('calc__page--active');
-    kf = el.dataset.kf;
-    result = Math.floor(count * kf);
-    price.textContent = "".concat(result, " \u0440\u0443\u0431.");
   });
-});
+  pages.forEach(function (el) {
+    el.addEventListener('click', function () {
+      pages.forEach(function (elem) {
+        return elem.classList.remove('calc__page--active');
+      });
+      el.classList.add('calc__page--active');
+      kf = el.dataset.kf;
+      result = Math.floor(count * kf);
+      price.textContent = "".concat(result, " \u0440\u0443\u0431.");
+    });
+  });
+
+  var _calc = document.querySelector('.calc');
+
+  var main = document.querySelector('main');
+  var calcClose = document.querySelector('.calc__close');
+  var calcBtn = document.querySelector('calc__btn');
+}
+
+function openCalc() {
+  calc.classList.add('calc--opened');
+}
+
+function closeCalc() {}
 
 /***/ })
 

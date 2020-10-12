@@ -133,6 +133,12 @@ a:not([href]) {
     }
 }
 
+.glide__slides {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    overflow: visible;
+}
+
 .glide__slides li {
     position: relative;
     z-index: 1;
@@ -212,10 +218,8 @@ a:not([href]) {
         opacity: .5;
         &__slide--active~li .proj {
             opacity: 0;
-            transition: 3s !important;
         }
         &__slide--active+li .proj {
-            transition: 4s !important;
             opacity: .5;
         }
         &__slide--active .proj,

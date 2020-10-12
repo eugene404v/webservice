@@ -1,6 +1,7 @@
 //import './modules/stickyHeader'
 import './modules/hamburger'
 import './modules/map'
+import './modules/calculator'
 
 import { openPopup, closePopup } from './modules/popup'
 window.openPopup = openPopup
@@ -42,4 +43,22 @@ if (document.querySelector('.testing__percents')) {
         }
     }, 20)
 
+}
+
+
+
+if (document.querySelector('.file_counter')) {
+    const $counter = document.querySelector('.file_counter')
+    const $file = document.querySelector('.contacts__upload')
+
+    $file.addEventListener("change", function() {
+        const files = this.files
+
+        $counter.textContent = files.length
+        if (files.length) {
+            $counter.classList.add('file_counter--visible')
+        } else {
+            $counter.classList.remove('file_counter--visible')
+        }
+    })
 }

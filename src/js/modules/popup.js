@@ -10,11 +10,6 @@ export function openPopup(popupSelector) {
 }
 
 export function closePopup() {
-
-
-
     popupContainer.classList.remove('popup--opened')
     popups.forEach(el => el.classList.remove('popup__window--opened'))
-
-
 }

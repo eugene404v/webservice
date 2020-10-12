@@ -1,4 +1,6 @@
-@import "./base.scss";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 @import "./modules/testing/testing.scss";
 @import "./modules/crm/crm";
 @import "./modules/testing/features--pen";

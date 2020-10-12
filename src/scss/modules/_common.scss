@@ -1,6 +1,8 @@
 body {
     padding: 0;
     color: $dark-text;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 button:active,
@@ -81,4 +83,21 @@ button {
 
 .colored {
     color: $hover;
+}
+
+.file_counter {
+    display: none;
+    position: absolute;
+    color: #fff;
+    background-color: $hover;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 12px;
+    left: 17px;
+    &--visible {
+        display: flex;
+    }
 }

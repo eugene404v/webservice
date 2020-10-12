@@ -1,4 +1,6 @@
-@import "./base.scss";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 //^common style
 .error {
     background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;

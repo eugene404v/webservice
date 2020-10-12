@@ -1,4 +1,6 @@
-@import "./base.scss";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 //
 .portfolio {
     &__wrapper {
@@ -63,10 +65,13 @@
 .works {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     &__item {
         width: 300px;
         margin-bottom: 50px;
+        margin-right: 34px;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
     }
     &__links {
         display: flex;
@@ -128,9 +133,12 @@
     }
     .works {
         &__item {
-            &:last-child {
-                margin-right: auto;
-                margin-left: 53px;
+            margin-right: 52px;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            &:nth-child(4n) {
+                margin-right: 52px;
             }
         }
     }
@@ -138,10 +146,13 @@
 
 @media screen and (max-width: 991px) {
     .works {
-        &__item {
-            &:last-child {
+        justify-content: space-between;
+        .works {
+            &__item {
                 margin-right: 0;
-                margin-left: 0;
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
             }
         }
     }

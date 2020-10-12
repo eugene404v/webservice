@@ -1,4 +1,6 @@
-@import "./base.scss";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/btn";
 //^common styles
 body {
     overflow-y: scroll;

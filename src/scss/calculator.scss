@@ -1,17 +1,42 @@
 @import './modules/mixins';
 @import './modules/variables';
 .calc {
-    position: absolute;
+    position: fixed;
     width: 1000px;
     background-color: #fff;
     left: 50%;
-    top: 200px;
+    top: 70px;
     transform: translateX(-50%);
     border: 16px solid white;
     border-radius: 40px;
     z-index: 9;
     box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    display: none;
+    pointer-events: all;
+    &--opened {
+        display: block;
+        animation: calc ease-in .3s;
+        z-index: 3;
+    }
+    &__overlay {
+        background: rgba(25, 26, 30, 0.24);
+        pointer-events: none;
+        animation: calc ease-in .3s;
+        z-index: 2;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        animation: calcOff ease-in .3s;
+        &--opened {
+            display: block;
+            animation: calc ease-in .3s;
+        }
+    }
     &__headline {
         color: #fff;
         background: linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
@@ -28,6 +53,7 @@
     }
     &__close {
         position: absolute;
+        cursor: pointer;
         right: 30px;
         top: 30px;
         width: 18px;
@@ -314,5 +340,23 @@
             margin-left: 0;
             margin-top: 10px;
         }
+    }
+}
+
+@keyframes calc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes calcOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

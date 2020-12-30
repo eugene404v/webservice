@@ -1,0 +1,44 @@
+@import './../../modules/mixins';
+
+.tenders {
+    &__headline {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        & > div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__wrapper {
+        @include wrapper
+    }
+
+    &__title {
+        color: #F36E0F;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+    }
+
+    &__subtitle {
+        max-width: 584px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tenders {
+        &__headline {
+            & > div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            max-width: none;
+        }
+    }
+}

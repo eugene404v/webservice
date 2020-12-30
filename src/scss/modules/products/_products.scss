@@ -104,11 +104,11 @@ $local-trans: .5s;
                 }
             }
             & .products__more {
-                color: $dark-text;
+                color: $hover;
                 transition: $local-trans;
             }
             & .products__svg {
-                fill: $dark-text;
+                fill: $hover;
                 transform: rotate(-45deg);
                 transition: $local-trans;
             }

@@ -106,15 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
       $counter.classList.remove('file_counter--visible');
     }
   });
-  /*const $form = document.querySelector('#form')
-  $form.onsubmit = async(e) => {
-      e.preventDefault()
-        await fetch('url', {
-          method: 'POST',
-          body: new FormData($form)
-      })
-    }*/
-
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map2', {
       center: [59.914540, 30.271627],
@@ -129,22 +120,20 @@ document.addEventListener('DOMContentLoaded', function () {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
       // Своё изображение иконки метки.
-      iconImageHref: './img/header-map.svg',
+      iconImageHref: '/assets/img/map.svg',
       // Размеры метки.
       iconImageSize: [30, 42],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
       iconImageOffset: [-5, -38]
     }), myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-      hintContent: 'Собственный значок метки с контентом',
-      balloonContent: 'А эта — новогодняя',
       iconContent: '12'
     }, {
       // Опции.
       // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
       // Своё изображение иконки метки.
-      iconImageHref: './img/header-map.svg',
+      iconImageHref: '/assets/img/map.svg',
       // Размеры метки.
       iconImageSize: [48, 48],
       // Смещение левого верхнего угла иконки относительно

@@ -18,7 +18,7 @@
     }
     &__text {
         max-width: 485px;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
     }
     &__slider {
         box-shadow: 4px 7px 21px 3px rgba(0, 0, 0, 0.15);
@@ -87,6 +87,7 @@ main {
             left: calc((100% - 950px) / 2);
             &--next {
                 right: calc((100% - 950px) / 2);
+                left: auto;
             }
         }
     }

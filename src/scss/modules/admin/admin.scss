@@ -1,4 +1,5 @@
 .admin {
+    padding-top: 50px;
     &__wrapper {
         @include wrapper;
     }
@@ -6,7 +7,7 @@
         @include fsz(40px, 40px, 23px);
         color: $hover;
         max-width: 600px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
     &__flex {
         display: flex;
@@ -96,6 +97,7 @@
     &__others {
         width: 190px;
         margin-left: auto;
+        margin-bottom: 25px;
     }
 }
 

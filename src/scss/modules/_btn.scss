@@ -91,3 +91,37 @@
         @include btn--down;
     }
 }
+
+.spa__btn,
+.products .btn {
+    @include btn;
+    transition: .3s;
+    &:hover {
+        @include btn--hover;
+        transition: .3s;
+        &::after {
+            background-position: left center;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .spa__btn,
+    .products .btn {
+        @include btn--hover;
+    }
+}
+
+.services .order__btn {
+    transition: .3s;
+    &:hover {
+        transition: .3s;
+        color: #fff;
+        background: #152238;
+        &::after {
+            background-position: left center;
+            background-color: #fff;
+            background-image: url('./../img/error-arrow.svg');
+        }
+    }
+}

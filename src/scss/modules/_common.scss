@@ -3,6 +3,17 @@ body {
     color: $dark-text;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
 }
 
 button:active,
@@ -78,7 +89,7 @@ button {
 }
 
 .glide__track {
-    overflow: visible;
+    overflow: visible !important;
 }
 
 .colored {
@@ -100,4 +111,11 @@ button {
     &--visible {
         display: flex;
     }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    color: $hover;
+    font-weight: 700;
 }

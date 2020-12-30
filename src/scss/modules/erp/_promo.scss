@@ -1,5 +1,8 @@
 .promo {
     background: url('./../img/erp-bg1.png') no-repeat 75% 40px, linear-gradient(93.05deg, rgba(39, 64, 96, 0.8) 0%, rgba(27, 40, 69, 0) 100%), #152238;
+    &__title--colored {
+        animation: none;
+    }
     &__item {
         max-width: 445px;
     }

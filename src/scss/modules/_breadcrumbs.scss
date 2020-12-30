@@ -1,0 +1,52 @@
+.breadcrumbs {
+    position: relative;
+    width: 1304px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #858585;
+    & ul {
+        padding-top: 15px;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 2;
+        margin-bottom: 39px;
+    }
+}
+
+.breadcrumb-item {
+    margin-right: 20px;
+    & a {
+        color: #858585;
+        white-space: nowrap;
+    }
+}
+
+.last_crumb a {
+    color: $hover;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1439px) {
+    .breadcrumbs {
+        width: 1124px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .breadcrumbs {
+        width: 1004px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .breadcrumbs {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

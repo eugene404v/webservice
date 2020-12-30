@@ -351,7 +351,21 @@
         transition: .5s;
         opacity: 1;
         height: auto;
-        padding: 10px 40px 20px 7px;
+        padding: 10px 40px 20px 15px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &__logo {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    &__img {
+        margin-right: 15px;
+        max-height: 100%;
     }
     &__title {
         margin-bottom: 20px;
@@ -363,7 +377,6 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        margin-bottom: 15px;
         opacity: .6;
         &:hover,
         &:active {
@@ -632,7 +645,7 @@
     }
     100% {
         opacity: 1;
-        height: 152px;
+        height: auto;
     }
 }
 

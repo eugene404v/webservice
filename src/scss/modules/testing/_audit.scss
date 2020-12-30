@@ -1,5 +1,7 @@
 .audit {
     padding-top: 20px;
+    overflow: hidden;
+    padding-bottom: 30px;
     &__wrapper {
         @include wrapper;
         display: grid;

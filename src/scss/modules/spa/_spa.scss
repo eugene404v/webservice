@@ -1,5 +1,4 @@
 .spa {
-    background: linear-gradient(136.39deg, rgba(245, 247, 250, 0.76) -6.15%, rgba(184, 198, 219, 0.0554167) 85.8%), #F2F2F2;
     padding-top: 25px;
     padding-bottom: 25px;
     &__wrapper {
@@ -71,6 +70,13 @@
         width: 230px;
         height: 52px;
         margin-top: 20px;
+    }
+}
+
+section.spa {
+    background: linear-gradient(136.39deg, rgba(245, 247, 250, 0.76) -6.15%, rgba(184, 198, 219, 0.0554167) 85.8%), #F2F2F2;
+    &:nth-child(2n) {
+        background: #fff;
     }
 }
 

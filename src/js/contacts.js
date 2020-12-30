@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
                 // Своё изображение иконки метки.
-                iconImageHref: './img/header-map.svg',
+                iconImageHref: '/assets/img/map.svg',
                 // Размеры метки.
                 iconImageSize: [30, 42],
                 // Смещение левого верхнего угла иконки относительно
@@ -46,15 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }),
 
             myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-                hintContent: 'Собственный значок метки с контентом',
-                balloonContent: 'А эта — новогодняя',
+
                 iconContent: '12'
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#imageWithContent',
                 // Своё изображение иконки метки.
-                iconImageHref: './img/header-map.svg',
+                iconImageHref: '/assets/img/map.svg',
                 // Размеры метки.
                 iconImageSize: [48, 48],
                 // Смещение левого верхнего угла иконки относительно

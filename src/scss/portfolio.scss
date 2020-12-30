@@ -3,6 +3,7 @@
 @import "./modules/btn";
 //
 .portfolio {
+    padding-top: 30px;
     &__wrapper {
         @include wrapper;
     }

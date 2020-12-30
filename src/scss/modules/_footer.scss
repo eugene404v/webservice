@@ -2,49 +2,185 @@
     padding-top: 42px;
     padding-bottom: 35px;
     background: #F2F2F2;
+    &__img {
+        width: 188px;
+        height: 52px;
+    }
+    & a {
+        color: $dark-text;
+    }
     &__wrapper {
         @include wrapper;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows: 75px 90px;
+        grid-template-areas: "logo serv prod port cont soc" "policy serv prod port cont soc";
     }
     &__logo {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000;
-        margin-bottom: 5px;
+        grid-area: logo;
+        font-size: 10px;
     }
-    &__year {
-        color: $hover;
-    }
-    &__copy {
-        color: rgba(0, 0, 0, 0.5);
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 15px;
+    &__address {
+        margin-top: 5px;
     }
     &__policy {
-        color: rgba(0, 0, 0, 0.5);
-        text-decoration: underline;
-        font-weight: normal;
+        font-size: 10px;
+        grid-area: policy;
+        color: rgba(0, 0, 0, .5);
+        & a {
+            color: rgba(0, 0, 0, .5);
+        }
+    }
+    &__privacy {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    &__title {
+        margin-bottom: 13px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        &--portfolio {
+            text-align: center;
+        }
+    }
+    &__item {
+        margin-bottom: 10px;
         font-size: 12px;
-        line-height: 15px;
+        font-weight: 400;
+    }
+    &__portfolio {
+        width: 243px;
+    }
+    &__works {
+        display: flex;
+        width: 243px;
+        justify-content: space-between;
+    }
+    &__work {
+        width: 73px;
+        height: 73px;
+        background: #FFFFFF;
+        border: 1px solid #C5C5C5;
+        border-radius: 2px;
+        & a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__soclist {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
+    &__soclink {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        &--vk {
+            background-image: url(./../img/footer-vk.svg);
+        }
+        &--inst {
+            background-image: url(./../img/footer-inst.svg);
+        }
+        &--yt {
+            background-image: url(./../img/footer-yt.svg);
+        }
+    }
+    &__socials {
+        grid-area: soc;
+    }
+    &__contacts {
+        grid-area: cont;
+    }
+    &__portfolio {
+        grid-area: port;
+    }
+    &__serv {
+        grid-area: serv;
+    }
+    &__prod {
+        grid-area: prod;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .footer {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: 75px 55px 75px;
+            grid-template-areas: "logo serv prod port" "policy serv prod port" "cont soc soc soc";
+        }
     }
 }
 
 @media screen and (max-width:991px) {
     .footer {
         &__wrapper {
-            margin-left: 296px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: 75px 55px 105px;
+            grid-template-areas: "logo serv prod" "policy serv prod" "port cont soc";
+        }
+        &__portfolio,
+        &__contacts,
+        &__socials {
+            margin-top: 20px;
         }
     }
 }
 
-@media screen and (max-width:610px) {
+@media screen and (max-width: 610px) {
     .footer {
         &__wrapper {
-            margin-left: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 75px 125px 125px auto auto;
+            grid-template-areas: "logo logo logo logo logo logo" "serv serv serv serv prod prod" "port port port port port port" "cont cont soc soc policy policy";
+        }
+        &__logo {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+        &__policy {
+            margin-top: 20px;
+        }
+        &__portfolio {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__address {
+            font-size: 12px;
+            width: 178px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .footer {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 75px 125px 125px auto auto;
+            grid-template-areas: "logo logo logo logo logo logo" "serv serv serv serv prod prod" "port port port port port port" "cont cont cont soc soc soc" "policy policy policy policy policy policy";
+        }
+        &__socials {
+            margin-right: 0;
+            margin-left: auto;
+        }
+        &__policy {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        &__img {
+            width: 148px;
+            height: 42px;
         }
     }
 }

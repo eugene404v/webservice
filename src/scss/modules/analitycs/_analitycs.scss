@@ -1,4 +1,8 @@
 .testing {
+    &__wrapper {
+        grid-template-rows: 10fr 15fr;
+        grid-column-gap: 20px;
+    }
     &__title {
         @include fsz(40px, 40px, 24px);
     }

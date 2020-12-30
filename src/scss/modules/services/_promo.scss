@@ -16,6 +16,8 @@
             line-height: 29px;
             margin-top: 30px;
             margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
         &__text {
             max-width: 340px;
@@ -218,14 +220,17 @@
                 height: auto;
             }
             &__contents {
-                height: 250px;
+                height: 150px;
                 &:after {
                     right: -140px;
-                    top: -360px;
+                    top: -380px;
                 }
             }
             &__link {
                 margin-right: 0;
+                & a {
+                    white-space: nowrap;
+                }
             }
         }
     }

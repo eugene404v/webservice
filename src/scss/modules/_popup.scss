@@ -81,6 +81,7 @@
         }
         & .contacts__label {
             color: $hover;
+            margin-bottom: -10px;
             &:before {
                 width: 38px;
                 border-radius: 50%;
@@ -92,6 +93,28 @@
         }
         & .contacts__btn {
             margin-top: -65px;
+        }
+    }
+    
+    @media screen and (max-width: 991px) {
+        .popup {
+            &__close {
+                top: 60px;
+            }
+            & .btn {
+                margin-right: 0;
+            }
+            & .contacts__form {
+                width: 400px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 410px) {
+        .popup {
+            & .contacts__form {
+                width: 300px;
+            }
         }
     }
     

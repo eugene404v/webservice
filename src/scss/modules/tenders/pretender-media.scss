@@ -1,0 +1,267 @@
+@media screen and (max-width: 1100px) {
+    .pretender {
+        overflow: hidden;
+        &__title {
+            &--altai {
+                max-width: 380px;
+            }
+        }
+        &__flex {
+            flex-wrap: wrap;
+            max-width: 400px;
+        }
+        &__item {
+            max-width: none;
+            &:nth-child(1) {
+                flex-basis: 50%;
+                order: 1;
+            }
+            &:nth-child(2) {
+                flex-basis: 100%;
+                order: 3;
+                margin-top: 20px;
+            }
+            &:nth-child(3) {
+                flex-basis: 50%;
+                order: 2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pretender {
+        &:before {
+            width: 60vw;
+        }
+        &:after {
+            width: 40vw;
+        }
+        &__left {
+            flex-basis: 60%;
+        }
+        &__right {
+            flex-basis: 40%;
+        }
+        &__title {
+            max-width: 360px;
+        }
+        &__img {
+            max-width: 300px;
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -55px;
+            &--small {
+                max-width: 205px;
+                left: 200px;
+            }
+        }
+        &--page {
+            & .pretender__right {
+                & .pretender__img {
+                    bottom: 40px;
+                    left: -70px;
+                    &--small {
+                        bottom: 70px;
+                        left: 105px;
+                    }
+                }
+            }
+        }
+    }
+    .colors {
+        & > div {
+            flex-direction: column;
+        }
+        &__left {
+            flex-basis: 100%;
+            & p {
+                max-width: none;
+            }
+        }
+        &__list {
+            justify-content: center;
+        }
+        &__img {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 200px;
+            display: block;
+        }
+    }
+    .problem {
+        & > div {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+    .resp {
+        &__title {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        &__pics {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__frame {
+            &:first-child {
+                margin-right: 50px;
+            }
+            &:last-child {
+                margin-top: 40px;
+            }
+        }
+    }
+    .result {
+        &__img {
+            position: static;
+            max-width: 630px;
+            margin-top: 20px;
+        }
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .pretender {
+        & > div {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        &:before {
+            width: 100vw;
+        }
+        &:after {
+            width: 100vw;
+            height: 300px;
+            top: auto;
+            bottom: 0;
+        }
+        &__left {
+            //flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        &__right {
+            width: 100%;
+            flex-basis: 300px;
+        }
+        &__img {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            &--small {
+                top: 65px;
+            }
+        }
+        &__link {
+            position: absolute;
+            bottom: 20px;
+            &--mfc,
+            &--omsk,
+            &--mfc:hover,
+            &--omsk:hover {
+                color: white;
+                background-image: url("./../img/arrow-white.svg");
+            }
+        }
+        &--page {
+            & .pretender__right {
+                min-height: 335px;
+                & .pretender__img {
+                    bottom: auto;
+                    left: 50%;
+                    top: 14px;
+                    transform: translateX(-50%);
+                    &--small {
+                        bottom: auto;
+                        top: 124px;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+        &__flex {
+            margin-top: 30px;
+        }
+        &__item {
+            flex-basis: 100% !important;
+            margin-bottom: 15px;
+        }
+        &__name {
+            margin-bottom: 10px;
+        }
+        &__descr {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            & span {
+                max-width: 95px;
+                text-align: left;
+            }
+        }
+    }
+
+    .problem {
+        &__right {
+            flex-basis: auto;
+        }
+    }
+
+    .resp {
+        &__pics {
+            margin-top: 0;
+        }
+        &__frame {
+            margin-top: 50px;
+            & img {
+                max-width: 165px;
+            }
+            &:first-child {
+                margin-right: 0;
+            }
+            &:last-child {
+                margin-top: 50px;
+                & img {
+                    max-width: 265px;
+                }
+            }
+        }
+    }
+    .result {
+        & img {
+            max-width: 290px;
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .repeat {
+        & > div {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__pair {
+            margin-bottom: 20px;
+        }
+    }
+    .title-other-tenders {
+        text-align: center;
+    }
+}

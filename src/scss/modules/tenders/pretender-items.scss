@@ -1,6 +1,7 @@
 .pretender {
     position: relative;
     margin-bottom: 25px;
+
     &:before {
         z-index: 0;
         position: absolute;
@@ -29,7 +30,7 @@
         }
     }
     &--mfc {
-        min-height: 450px !important;
+        //min-height: 450px !important;
         &:before {
             background-color: #f1e7df;
         }
@@ -37,7 +38,7 @@
             background-color: #f1614c;
         }
         & .tenders__wrapper {
-            min-height: 450px;
+            //min-height: 450px;
         }
     }
     &--omsk {
@@ -108,7 +109,6 @@
         }
         &--mfc {
             color: #663a2a;
-            max-width: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -363,6 +363,9 @@
         font-weight: 500;
         max-width: 670px;
     }
+    &__left {
+        padding-top: 0;
+    }
 }
 
 .resp {
@@ -564,3 +567,12 @@
         box-shadow: 7px 27px 77px rgba(170, 170, 170, 0.24);
     }
 }
+
+
+
+
+
+
+//
+
+@import './pretender-media.scss';

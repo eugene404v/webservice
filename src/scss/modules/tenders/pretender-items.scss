@@ -501,6 +501,9 @@
         align-items: center;
         margin-bottom: 30px;
     }
+    & .pretender__left {
+        padding-top: 0;
+    }
 }
 
 .start {
@@ -527,16 +530,16 @@
         z-index: 1;
 
         &--1 {
-            top: -305px;
-            left: 39vw;
+            top: -325px;
+            left: 40vw;
         }
         &--2 {
             top: 0;
-            right: 40px;
+            left: calc(40vw + 552px);
         }
         &--3 {
             top: 370px;
-            left: 39vw;
+            left: 40vw;
         }
     }
 }
